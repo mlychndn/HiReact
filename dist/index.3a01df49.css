@@ -1,0 +1,41 @@
+img {
+  width: 20%;
+}
+
+.header {
+  color: #fff;
+  background-color: orange;
+  border: 2px solid #000;
+  justify-content: space-between;
+  margin: .5%;
+  padding: 2%;
+  display: flex;
+}
+
+.nav-bar {
+  justify-content: flex-start;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-bar > li {
+  padding: 1%;
+}
+
+.card-container {
+  flex-wrap: wrap;
+  margin: .5%;
+  padding: 1%;
+  display: flex;
+}
+
+.card {
+  border: 1px solid #000;
+  margin: 1%;
+}
+
+.card > img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
