@@ -1,12 +1,13 @@
 import restaurantData, { IMG_CDN_URL } from "../utils/config";
 import { useState } from "react";
 
-const getFilterValue = (searchText, restaurants, setSearchText) => {
-  // console.log(restaurants);
-  const filterRestaurant = restaurants.filter((restaurant) =>
+const getFilterValue = (searchText, setSearchText) => {
+  // console.log(restaurantData.cards);
+  let filterRestaurant = [...restaurantData.cards];
+  filterRestaurant = filterRestaurant.filter((restaurant) =>
     restaurant.data.name.includes(searchText)
   );
-  console.log(filterRestaurant);
+
   setSearchText("");
   return filterRestaurant;
 };
@@ -35,9 +36,7 @@ const Search = (props) => {
       />
       <button
         onClick={() => {
-          props.setRestaurants(
-            getFilterValue(searchText, props.restaurants, setSearchText)
-          );
+          props.setRestaurants(getFilterValue(searchText, setSearchText));
         }}
       >
         Search

@@ -27391,10 +27391,12 @@ var _react = require("react");
 var _config = require("../utils/config");
 var _configDefault = parcelHelpers.interopDefault(_config);
 var _s = $RefreshSig$(), _s1 = $RefreshSig$();
-const getFilterValue = (searchText, restaurants, setSearchText)=>{
-    // console.log(restaurants);
-    const filterRestaurant = restaurants.filter((restaurant)=>restaurant.data.name.includes(searchText));
-    console.log(filterRestaurant);
+const getFilterValue = (searchText, setSearchText)=>{
+    // console.log(restaurantData.cards);
+    let filterRestaurant = [
+        ...(0, _configDefault.default).cards
+    ];
+    filterRestaurant = filterRestaurant.filter((restaurant)=>restaurant.data.name.includes(searchText));
     setSearchText("");
     return filterRestaurant;
 };
@@ -27417,17 +27419,17 @@ const Search = (props)=>{
                 onChange: getSearchValue
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>{
-                    props.setRestaurants(getFilterValue(searchText, props.restaurants, setSearchText));
+                    props.setRestaurants(getFilterValue(searchText, setSearchText));
                 },
                 children: "Search"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 36,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27435,12 +27437,12 @@ const Search = (props)=>{
                     children: initialValue
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 47,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 46,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27448,7 +27450,7 @@ const Search = (props)=>{
                 children: "Change "
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 49,
+                lineNumber: 48,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27466,21 +27468,21 @@ const Card = ({ name , id , cloudinaryImageId , cuisines , avgRating  })=>{
                 alt: "food-img"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 58,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: name
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 59,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: cuisines?.join(", ")
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27490,13 +27492,13 @@ const Card = ({ name , id , cloudinaryImageId , cuisines , avgRating  })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 61,
+                lineNumber: 60,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 57,
+        lineNumber: 56,
         columnNumber: 5
     }, undefined);
 };
@@ -27511,7 +27513,7 @@ const Body = ()=>{
                 setRestaurants: setRestaurants
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 70,
+                lineNumber: 69,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27521,14 +27523,14 @@ const Body = ()=>{
                         key: restaurant.data.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 73,
+                            lineNumber: 72,
                             columnNumber: 11
                         },
                         __self: undefined
                     }))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 71,
+                lineNumber: 70,
                 columnNumber: 7
             }, undefined)
         ]
