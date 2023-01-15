@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap";
 img {
   width: 20%;
 }
@@ -36,6 +37,93 @@ img {
 
 .card > img {
   width: 100%;
+}
+
+.shimmer-card {
+  height: 250px;
+  width: 250px;
+  border: 2px solid #8f4040;
+  margin: 6px;
+}
+
+.shimmer-card-img {
+  height: 50%;
+  width: 96%;
+  background-color: #cac8c8;
+  margin: 2%;
+}
+
+.shimmer-card-content {
+  height: 10%;
+  width: 96%;
+  background-color: #cac8c8;
+  margin: 5% 2% 2%;
+}
+
+.shimmer-card-details {
+  height: 10%;
+  width: 70%;
+  background-color: #cac8c8;
+  margin: 5% 2% 2%;
+}
+
+.search-btn {
+  width: 80px;
+  background-color: #aa0c0c;
+  margin: 1% 1% 1% 4%;
+}
+
+.input-search {
+  width: 50%;
+  height: 15%;
+  margin-top: 3%;
+  margin-left: 1%;
+  padding: 2px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.restaurant-card {
+  height: 450px;
+  width: 350px;
+  border: 2px solid #8f4040;
+  margin: 6px;
+}
+
+.food-img {
+  height: 50%;
+  width: 100%;
+}
+
+.restaurant-name {
+  padding-left: 2%;
+  font-family: Roboto, sans-serif;
+}
+
+.restaurant-rating {
+  width: 15%;
+  background-color: #1faa0c;
+  margin-left: 4%;
+  padding: .5%;
+  display: inline;
+}
+
+.restaurant-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.footer {
+  color: #fff;
+  height: 50px;
+  text-align: center;
+  background-color: #1e1c1c;
+  padding-top: 1px;
+  padding-bottom: 3px;
+  font-family: Roboto, sans-serif;
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */

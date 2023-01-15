@@ -1,78 +1,73 @@
 import restaurantData, { IMG_CDN_URL } from "../utils/config";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ShimmerUi from "./ShimmerUi";
+import Search from "./Search";
 
-const getFilterValue = (searchText, setSearchText) => {
-  // console.log(restaurantData.cards);
-  let filterRestaurant = [...restaurantData.cards];
-  filterRestaurant = filterRestaurant.filter((restaurant) =>
-    restaurant.data.name.includes(searchText)
-  );
-
-  setSearchText("");
-  return filterRestaurant;
-};
-
-const Search = (props) => {
-  const [searchText, setSearchText] = useState("");
-  const [initialValue, setInitialValue] = useState("true");
-
-  const getSearchValue = (e) => {
-    setSearchText(e.target.value);
-  };
-
-  const checkToggle = () => {
-    initialValue === "true"
-      ? setInitialValue("false")
-      : setInitialValue("true");
-  };
+const RestaurantCard = (props) => {
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    lastMileTravelString,
+    costForTwoString,
+  } = props.details;
+  const imgUrl = `${IMG_CDN_URL}${cloudinaryImageId}
+  `;
+  const cuisinesData = cuisines.join(" ,");
 
   return (
-    <>
-      <input
-        type="text"
-        value={searchText}
-        placeholder="Search"
-        onChange={getSearchValue}
-      />
-      <button
-        onClick={() => {
-          props.setRestaurants(getFilterValue(searchText, setSearchText));
-        }}
-      >
-        Search
-      </button>
-
-      <div>
-        <h1>{initialValue}</h1>
-      </div>
-      <button onClick={checkToggle}>Change </button>
-    </>
-  );
-};
-
-const Card = ({ name, id, cloudinaryImageId, cuisines, avgRating }) => {
-  const imgUrl = `${IMG_CDN_URL}${cloudinaryImageId}`;
-  return (
-    <div className="card">
-      <img src={imgUrl} alt="food-img" />
-      <h3>{name}</h3>
-      <div>{cuisines?.join(", ")}</div>
-      <p>{avgRating}⭐</p>
+    <div className="restaurant-card">
+      <img className="food-img" src={imgUrl} alt="" />
+      <h2 className="restaurant-name">{name}</h2>
+      <p className="restaurant-name">{cuisinesData}</p>
+      <div className="restaurant-rating"> ⭐{avgRating}</div>
+      <div className="restaurant-rating"> {lastMileTravelString}</div>
+      <div className="restaurant-rating"> {costForTwoString}</div>
     </div>
   );
 };
 
 const Body = () => {
-  const [restaurants, setRestaurants] = useState(restaurantData.cards);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [allRestaurant, setAllRestaurant] = useState([]);
+
+  useEffect(() => {
+    getRestaurantData();
+  }, []);
+
+  const getRestaurantData = async () => {
+    const response = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.45242&lng=78.33159289999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const data = await response.json();
+    const restaurantList = data?.data?.cards[2]?.data?.data?.cards;
+    setFilteredRestaurant(restaurantList);
+    setAllRestaurant(restaurantList);
+  };
+
+  const getRestaurantList = (data) => {
+    setFilteredRestaurant(data);
+  };
+
   return (
-    <>
-      <Search restaurants={restaurants} setRestaurants={setRestaurants} />
-      <div className="card-container">
-        {restaurants.map((restaurant) => (
-          <Card {...restaurant.data} key={restaurant.data.id} />
-        ))}
-      </div>
-    </>
+    <div>
+      <Search allRestaurant={allRestaurant} filterHandler={getRestaurantList} />
+      {filteredRestaurant.length === 0 ? (
+        <div className="shimmer-container">
+          <ShimmerUi />
+        </div>
+      ) : (
+        <div className="restaurant-container">
+          {filteredRestaurant.map((restaurant) => (
+            <RestaurantCard
+              details={restaurant.data}
+              key={restaurant.data.id}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

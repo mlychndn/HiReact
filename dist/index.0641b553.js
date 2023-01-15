@@ -2947,7 +2947,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("c03463214d175e2f");
 
@@ -27132,7 +27132,96 @@ module.exports = require("7632589b9c5c091f");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
+},{}],"hsJbF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bfed.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+const Header = ()=>{
+    // const [title, setTitle] = useState("Food Villa");
+    // const buttonHandler = () => {
+    //   setTitle("Naya Title");
+    // };
+    console.log("rerender");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: "/",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: "https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg",
+                    alt: "logo"
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "nav-bar",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 24,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 25,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 21,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header.js",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$bfed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27296,88 +27385,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"4b636f61b3703417":"786KC"}],"hsJbF":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bfed.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: "/",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: "https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg",
-                    alt: "logo"
-                }, void 0, false, {
-                    fileName: "src/components/Header.js",
-                    lineNumber: 4,
-                    columnNumber: 7
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 3,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    className: "nav-bar",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 11,
-                            columnNumber: 9
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 12,
-                            columnNumber: 9
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 13,
-                            columnNumber: 9
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Header.js",
-                    lineNumber: 10,
-                    columnNumber: 7
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Header.js",
-        lineNumber: 2,
-        columnNumber: 3
-    }, undefined);
-_c = Header;
-exports.default = Header;
-var _c;
-$RefreshReg$(_c, "Header");
-
-  $parcel$ReactRefreshHelpers$bfed.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
+},{"4b636f61b3703417":"786KC"}],"8yaV8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27387,169 +27395,160 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
 var _config = require("../utils/config");
 var _configDefault = parcelHelpers.interopDefault(_config);
-var _s = $RefreshSig$(), _s1 = $RefreshSig$();
-const getFilterValue = (searchText, setSearchText)=>{
-    // console.log(restaurantData.cards);
-    let filterRestaurant = [
-        ...(0, _configDefault.default).cards
-    ];
-    filterRestaurant = filterRestaurant.filter((restaurant)=>restaurant.data.name.includes(searchText));
-    setSearchText("");
-    return filterRestaurant;
-};
-const Search = (props)=>{
-    _s();
-    const [searchText, setSearchText] = (0, _react.useState)("");
-    const [initialValue, setInitialValue] = (0, _react.useState)("true");
-    const getSearchValue = (e)=>{
-        setSearchText(e.target.value);
-    };
-    const checkToggle = ()=>{
-        initialValue === "true" ? setInitialValue("false") : setInitialValue("true");
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                value: searchText,
-                placeholder: "Search",
-                onChange: getSearchValue
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>{
-                    props.setRestaurants(getFilterValue(searchText, setSearchText));
-                },
-                children: "Search"
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 37,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: initialValue
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 46,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 45,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: checkToggle,
-                children: "Change "
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 48,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Search, "Thd68Xi3bBYX8HNfvrrQoEz3U5I=");
-_c = Search;
-const Card = ({ name , id , cloudinaryImageId , cuisines , avgRating  })=>{
-    const imgUrl = `${(0, _config.IMG_CDN_URL)}${cloudinaryImageId}`;
+var _react = require("react");
+var _shimmerUi = require("./ShimmerUi");
+var _shimmerUiDefault = parcelHelpers.interopDefault(_shimmerUi);
+var _search = require("./Search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
+var _s = $RefreshSig$();
+const RestaurantCard = (props)=>{
+    const { cloudinaryImageId , name , cuisines , avgRating , lastMileTravelString , costForTwoString  } = props.details;
+    const imgUrl = `${(0, _config.IMG_CDN_URL)}${cloudinaryImageId}
+  `;
+    const cuisinesData = cuisines.join(" ,");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
+        className: "restaurant-card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "food-img",
                 src: imgUrl,
-                alt: "food-img"
+                alt: ""
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 57,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "restaurant-name",
                 children: name
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 58,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: cuisines?.join(", ")
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 59,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "restaurant-name",
+                children: cuisinesData
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-rating",
                 children: [
-                    avgRating,
-                    "⭐"
+                    " ⭐",
+                    avgRating
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 60,
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-rating",
+                children: [
+                    " ",
+                    lastMileTravelString
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-rating",
+                children: [
+                    " ",
+                    costForTwoString
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 56,
+        lineNumber: 20,
         columnNumber: 5
     }, undefined);
 };
-_c1 = Card;
+_c = RestaurantCard;
 const Body = ()=>{
-    _s1();
-    const [restaurants, setRestaurants] = (0, _react.useState)((0, _configDefault.default).cards);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    _s();
+    const [filteredRestaurant, setFilteredRestaurant] = (0, _react.useState)([]);
+    const [allRestaurant, setAllRestaurant] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        getRestaurantData();
+    }, []);
+    const getRestaurantData = async ()=>{
+        const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.45242&lng=78.33159289999999&page_type=DESKTOP_WEB_LISTING");
+        const data = await response.json();
+        const restaurantList = data?.data?.cards[2]?.data?.data?.cards;
+        setFilteredRestaurant(restaurantList);
+        setAllRestaurant(restaurantList);
+    };
+    const getRestaurantList = (data)=>{
+        setFilteredRestaurant(data);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Search, {
-                restaurants: restaurants,
-                setRestaurants: setRestaurants
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {
+                allRestaurant: allRestaurant,
+                filterHandler: getRestaurantList
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 69,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "card-container",
-                children: restaurants.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)(Card, {
-                        ...restaurant.data,
-                        key: restaurant.data.id,
-                        __source: {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 72,
-                            columnNumber: 11
-                        },
-                        __self: undefined
-                    }))
+            filteredRestaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUiDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 58,
+                    columnNumber: 11
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 70,
-                columnNumber: 7
+                lineNumber: 57,
+                columnNumber: 9
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-container",
+                children: filteredRestaurant.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        details: restaurant.data
+                    }, restaurant.data.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 63,
+                        columnNumber: 13
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 61,
+                columnNumber: 9
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 54,
+        columnNumber: 5
+    }, undefined);
 };
-_s1(Body, "+KQ/uQQVuysrJ3lGte+LIT3XjCQ=");
-_c2 = Body;
+_s(Body, "2T43NnCoa3pVDXnKP+4gz82GEKQ=");
+_c1 = Body;
 exports.default = Body;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "Search");
-$RefreshReg$(_c1, "Card");
-$RefreshReg$(_c2, "Body");
+var _c, _c1;
+$RefreshReg$(_c, "RestaurantCard");
+$RefreshReg$(_c1, "Body");
 
   $parcel$ReactRefreshHelpers$0606.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/config":"4LaEY"}],"4LaEY":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/config":"4LaEY","react":"21dqq","./ShimmerUi":"hBsvF","./Search":"jqPPz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4LaEY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
@@ -29418,7 +29417,401 @@ const restaurantData = {
 };
 exports.default = restaurantData;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pPOA":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hBsvF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$aec6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$aec6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerUi = function() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 5,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 6,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 7,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 39,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 46,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 47,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
+};
+_c = ShimmerUi;
+exports.default = ShimmerUi;
+var _c;
+$RefreshReg$(_c, "ShimmerUi");
+
+  $parcel$ReactRefreshHelpers$aec6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jqPPz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8a55.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const Search = (props)=>{
+    _s();
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    const { allRestaurant , filterHandler  } = props;
+    const getRestaurant = (e)=>{
+        if (e.key === "Enter") getFilteredRestaurant();
+    };
+    const getFilteredRestaurant = ()=>{
+        const searchVal = searchText;
+        setSearchText("");
+        // allRestaurant.forEach((restaurant) => {
+        //   console.log(restaurant.data.name);
+        // });
+        const filteredRestaurant = allRestaurant.filter((restaurant)=>restaurant?.data?.name.toLowerCase().includes(searchVal.toLowerCase()));
+        filterHandler(filteredRestaurant);
+    };
+    const getSearchValue = (e)=>{
+        setSearchText(e.target.value);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                className: "input-search",
+                type: "text",
+                value: searchText,
+                placeholder: "Search",
+                onChange: getSearchValue,
+                onKeyDown: getRestaurant
+            }, void 0, false, {
+                fileName: "src/components/Search.js",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "search-btn",
+                onClick: getFilteredRestaurant,
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/components/Search.js",
+                lineNumber: 41,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Search, "OAGvOw28fBJQW7HtXCjc9nvla2M=");
+_c = Search;
+exports.default = Search;
+var _c;
+$RefreshReg$(_c, "Search");
+
+  $parcel$ReactRefreshHelpers$8a55.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29429,12 +29822,20 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "footer"
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "footer",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            className: "footer-header",
+            children: "Thank you for visting our site \uD83D\uDE0A\uD83D\uDE0A"
+        }, void 0, false, {
+            fileName: "src/components/Footer.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
     }, void 0, false, {
         fileName: "src/components/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
+        lineNumber: 3,
+        columnNumber: 5
     }, undefined);
 };
 _c = Footer;

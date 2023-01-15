@@ -1,19 +1,32 @@
-const Header = () => (
-  <div className="header">
-    <a href="/">
-      <img
-        src="https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg"
-        alt="logo"
-      />
-    </a>
-    <div className="nav">
-      <ul className="nav-bar">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+import { useState } from "react";
+
+const Header = () => {
+  // const [title, setTitle] = useState("Food Villa");
+
+  // const buttonHandler = () => {
+  //   setTitle("Naya Title");
+  // };
+
+  console.log("rerender");
+  return (
+    <div className="header">
+      <a href="/">
+        <img
+          src="https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg"
+          alt="logo"
+        />
+      </a>
+      {/* <h1>{title}</h1>
+      <button onClick={buttonHandler}>change title</button> */}
+      <div className="nav">
+        <ul className="nav-bar">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Header;
