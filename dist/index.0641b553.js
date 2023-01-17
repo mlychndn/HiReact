@@ -2914,22 +2914,28 @@ var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _about = require("./components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
+var _error = require("./components/Error");
+var _errorDefault = parcelHelpers.interopDefault(_error);
+var _contact = require("./components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _restaurantMenu = require("./components/RestaurantMenu");
+var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 12,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 13,
-                columnNumber: 7
+                lineNumber: 16,
+                columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 14,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]
@@ -2938,30 +2944,79 @@ const AppLayout = ()=>{
 _c = AppLayout;
 const router = (0, _reactRouterDom.createBrowserRouter)([
     {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-            fileName: "src/app.js",
-            lineNumber: 22,
-            columnNumber: 14
-        }, undefined),
-        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Error, {}, void 0, false, {
-            fileName: "src/app.js",
-            lineNumber: 23,
-            columnNumber: 19
-        }, undefined)
-    },
-    {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 27,
+            lineNumber: 25,
             columnNumber: 14
         }, undefined),
-        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Error, {}, void 0, false, {
-            fileName: "src/app.js",
-            lineNumber: 28,
-            columnNumber: 19
-        }, undefined)
+        children: [
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 29,
+                    columnNumber: 18
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 30,
+                    columnNumber: 23
+                }, undefined)
+            },
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 34,
+                    columnNumber: 18
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 35,
+                    columnNumber: 23
+                }, undefined)
+            },
+            {
+                path: "/home",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 39,
+                    columnNumber: 18
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 40,
+                    columnNumber: 23
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 44,
+                    columnNumber: 18
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 45,
+                    columnNumber: 23
+                }, undefined)
+            },
+            {
+                path: "/:id",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 49,
+                    columnNumber: 18
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 50,
+                    columnNumber: 23
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -2969,7 +3024,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: router
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 32,
+    lineNumber: 56,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -2980,7 +3035,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./components/About":"9R1Eu"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./components/About":"9R1Eu","./components/Error":"kvula","./components/Contact":"cgAOG","./components/RestaurantMenu":"8PuJ6"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("c03463214d175e2f");
 
@@ -27176,11 +27231,18 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 const Header = ()=>{
-    // const [title, setTitle] = useState("Food Villa");
+    _s();
+    const [login, setLogin] = (0, _react.useState)("true");
     // const buttonHandler = () => {
     //   setTitle("Naya Title");
     // };
+    const toggleLogin = ()=>{
+        console.log("button is clicked");
+        login === "true" ? setLogin("false") : setLogin("true");
+    };
     console.log("rerender");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
@@ -27192,12 +27254,12 @@ const Header = ()=>{
                     alt: "logo"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 14,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 13,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27206,44 +27268,78 @@ const Header = ()=>{
                     className: "nav-bar",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                className: "nav-list",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 29,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 23,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/about",
+                                className: "nav-list",
+                                children: "About"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 34,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 24,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                className: "nav-list",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 39,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 25,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 22,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 21,
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "login-btn",
+                onClick: toggleLogin,
+                children: login === "true" ? "Login" : "Logout"
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 12,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "UijMZjSC2g9rnlNvUkSaxY3rTOI=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -27254,7 +27350,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27418,2470 +27514,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"4b636f61b3703417":"786KC"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("../utils/config");
-var _configDefault = parcelHelpers.interopDefault(_config);
-var _react = require("react");
-var _shimmerUi = require("./ShimmerUi");
-var _shimmerUiDefault = parcelHelpers.interopDefault(_shimmerUi);
-var _search = require("./Search");
-var _searchDefault = parcelHelpers.interopDefault(_search);
-var _s = $RefreshSig$();
-const RestaurantCard = (props)=>{
-    const { cloudinaryImageId , name , cuisines , avgRating , lastMileTravelString , costForTwoString  } = props.details;
-    const imgUrl = `${(0, _config.IMG_CDN_URL)}${cloudinaryImageId}
-  `;
-    const cuisinesData = cuisines.join(" ,");
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restaurant-card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "food-img",
-                src: imgUrl,
-                alt: ""
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 21,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "restaurant-name",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 22,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "restaurant-name",
-                children: cuisinesData
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-rating",
-                children: [
-                    " ⭐",
-                    avgRating
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-rating",
-                children: [
-                    " ",
-                    lastMileTravelString
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 25,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-rating",
-                children: [
-                    " ",
-                    costForTwoString
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 26,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Body.js",
-        lineNumber: 20,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurantCard;
-const Body = ()=>{
-    _s();
-    const [filteredRestaurant, setFilteredRestaurant] = (0, _react.useState)([]);
-    const [allRestaurant, setAllRestaurant] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        getRestaurantData();
-    }, []);
-    const getRestaurantData = async ()=>{
-        const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.45242&lng=78.33159289999999&page_type=DESKTOP_WEB_LISTING");
-        const data = await response.json();
-        const restaurantList = data?.data?.cards[2]?.data?.data?.cards;
-        setFilteredRestaurant(restaurantList);
-        setAllRestaurant(restaurantList);
-    };
-    const getRestaurantList = (data)=>{
-        setFilteredRestaurant(data);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {
-                allRestaurant: allRestaurant,
-                filterHandler: getRestaurantList
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 55,
-                columnNumber: 7
-            }, undefined),
-            filteredRestaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUiDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 58,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 57,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-container",
-                children: filteredRestaurant.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        details: restaurant.data
-                    }, restaurant.data.id, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 63,
-                        columnNumber: 13
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 61,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Body.js",
-        lineNumber: 54,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Body, "2T43NnCoa3pVDXnKP+4gz82GEKQ=");
-_c1 = Body;
-exports.default = Body;
-var _c, _c1;
-$RefreshReg$(_c, "RestaurantCard");
-$RefreshReg$(_c1, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../utils/config":"4LaEY","react":"21dqq","./ShimmerUi":"hBsvF","./Search":"jqPPz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4LaEY":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
-const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const restaurantData = {
-    cards: [
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "218068",
-                name: "Mehfil",
-                uuid: "c9213116-1e89-4cb3-81a9-b11f2d838fd3",
-                city: "3",
-                area: "Gachibowli",
-                totalRatingsString: "10000+ ratings",
-                cloudinaryImageId: "rfngxpkeablm4ses3d0j",
-                cuisines: [
-                    "Biryani",
-                    "Chinese",
-                    "Indian",
-                    "Kebabs",
-                    "Tandoor",
-                    "Desserts"
-                ],
-                tags: [],
-                costForTwo: 30000,
-                costForTwoString: "₹300 FOR TWO",
-                deliveryTime: 38,
-                minDeliveryTime: 38,
-                maxDeliveryTime: 38,
-                slaString: "38 MINS",
-                lastMileTravel: 4.5,
-                slugs: {
-                    restaurant: "mehfil-gachibowli-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "3rd Floor, 2-37/VN/140/A/ Sri Mallikarjuna Towers, Gachibowli Road, Vinayak Nagar, Indira Nagar,  Gachibowli",
-                locality: "Vinayak Nagar",
-                parentId: 637,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "4.5 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "218068",
-                    deliveryTime: 38,
-                    minDeliveryTime: 38,
-                    maxDeliveryTime: 38,
-                    lastMileTravel: 4.5,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.8",
-                totalRatings: 10000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "137034",
-                name: "Shah Ghouse Spl Shawarma",
-                uuid: "6db9d674-565f-472f-a09a-e0789f767fc6",
-                city: "3",
-                area: "Gachibowli",
-                totalRatingsString: "5000+ ratings",
-                cloudinaryImageId: "kmzr7zp4djhuk66wdbsc",
-                cuisines: [
-                    "Lebanese",
-                    "Tandoor"
-                ],
-                tags: [],
-                costForTwo: 30000,
-                costForTwoString: "₹300 FOR TWO",
-                deliveryTime: 40,
-                minDeliveryTime: 40,
-                maxDeliveryTime: 40,
-                slaString: "40 MINS",
-                lastMileTravel: 7.599999904632568,
-                slugs: {
-                    restaurant: "shah-ghouse-spl-shawarma-gachibowli-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "8-191/15, Opposite Bio Diversity Park, Raidurgam, Madhura Nagar Colony, Gachibowli, Hyderabad",
-                locality: "Opposite Bio Diversity Park",
-                parentId: 19255,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "7.5 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "137034",
-                    deliveryTime: 40,
-                    minDeliveryTime: 40,
-                    maxDeliveryTime: 40,
-                    lastMileTravel: 7.599999904632568,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "4.0",
-                totalRatings: 5000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "120129",
-                name: "Shah Ghouse Hotel",
-                uuid: "a3177899-355f-4109-8a1f-b24b31afbcd8",
-                city: "3",
-                area: "Land Mark Residency",
-                totalRatingsString: "5000+ ratings",
-                cloudinaryImageId: "von4k7mxgbgv0w58apx6",
-                cuisines: [
-                    "Biryani",
-                    "North Indian",
-                    "Chinese",
-                    "Mughlai",
-                    "Tandoor"
-                ],
-                tags: [],
-                costForTwo: 30000,
-                costForTwoString: "₹300 FOR TWO",
-                deliveryTime: 36,
-                minDeliveryTime: 36,
-                maxDeliveryTime: 36,
-                slaString: "36 MINS",
-                lastMileTravel: 6.800000190734863,
-                slugs: {
-                    restaurant: "shah-ghouse-hotel-restaurant-kondapur-kondapur",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "2-25/A, Beside Apollo Hospital, Near Kondapur Kothaguda 'X' Road, Kondapur, Hyderabad",
-                locality: "Kothaguda 'X' Road",
-                parentId: 19271,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "6.8 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "120129",
-                    deliveryTime: 36,
-                    minDeliveryTime: 36,
-                    maxDeliveryTime: 36,
-                    lastMileTravel: 6.800000190734863,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.9",
-                totalRatings: 5000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "328934",
-                name: "Raju Gari Biryani",
-                uuid: "231bf7de-b635-424a-a70d-dc203ea81616",
-                city: "3",
-                area: "Shaikpet",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "ymiu9cp97z3tow0kknlv",
-                cuisines: [
-                    "Biryani",
-                    "North Indian",
-                    "Snacks",
-                    "Mughlai",
-                    "Chinese"
-                ],
-                tags: [],
-                costForTwo: 20000,
-                costForTwoString: "₹200 FOR TWO",
-                deliveryTime: 39,
-                minDeliveryTime: 35,
-                maxDeliveryTime: 45,
-                slaString: "35-45 MINS",
-                lastMileTravel: 10.5,
-                slugs: {
-                    restaurant: "rajugaribiryani-manikonda-manikonda",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "483, OU Colony, Shaikpet, Hyderabad, Telangana 500008, India",
-                locality: "Manikonda",
-                parentId: 165947,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "10.5 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "328934",
-                    deliveryTime: 39,
-                    minDeliveryTime: 35,
-                    maxDeliveryTime: 45,
-                    lastMileTravel: 10.5,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.8",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "34444",
-                name: "Pakwaan Grand",
-                uuid: "edf140b3-8dd2-47c0-8f8d-7e161a8bfe3f",
-                city: "3",
-                area: "Gachibowli",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "mkmmacm0pxdt61gz0m4y",
-                cuisines: [
-                    "North Indian",
-                    "Chinese",
-                    "Biryani",
-                    "Tandoor"
-                ],
-                tags: [],
-                costForTwo: 30000,
-                costForTwoString: "₹300 FOR TWO",
-                deliveryTime: 41,
-                minDeliveryTime: 41,
-                maxDeliveryTime: 41,
-                slaString: "41 MINS",
-                lastMileTravel: 7.800000190734863,
-                slugs: {
-                    restaurant: "pakwaan-grand-gachibowli-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "Near Rai Durgam police Station,Gachibowli, Main Road, Gachibowli, Hyderabad",
-                locality: "Rai Durgam police Station",
-                parentId: 19911,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "7.8 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "34444",
-                    deliveryTime: 41,
-                    minDeliveryTime: 41,
-                    maxDeliveryTime: 41,
-                    lastMileTravel: 7.800000190734863,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.6",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "161469",
-                name: "S.K. Shawarma",
-                uuid: "a11e1210-5c15-4a43-9e56-9a8019de8770",
-                city: "3",
-                area: "Gachibowli",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "vpjfqqzbllzvxjj52djl",
-                cuisines: [
-                    "Arabian",
-                    "Fast Food"
-                ],
-                tags: [],
-                costForTwo: 20000,
-                costForTwoString: "₹200 FOR TWO",
-                deliveryTime: 29,
-                minDeliveryTime: 29,
-                maxDeliveryTime: 29,
-                slaString: "29 MINS",
-                lastMileTravel: 4.900000095367432,
-                slugs: {
-                    restaurant: "sk-shawarma-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "SK Shawarma, DLF Gate No 1, Gachibowli",
-                locality: "DLF Gate No 1",
-                parentId: 387848,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "4.9 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "161469",
-                    deliveryTime: 29,
-                    minDeliveryTime: 29,
-                    maxDeliveryTime: 29,
-                    lastMileTravel: 4.900000095367432,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.8",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "221756",
-                name: "La Pino'z Pizza",
-                uuid: "919f06a0-8675-400f-bc84-250aa159a247",
-                city: "3",
-                area: "Hitec City",
-                totalRatingsString: "5000+ ratings",
-                cloudinaryImageId: "rgjfx1v2hapqnutnxazg",
-                cuisines: [
-                    "Pizzas",
-                    "Italian",
-                    "Beverages",
-                    "Snacks"
-                ],
-                tags: [],
-                costForTwo: 20000,
-                costForTwoString: "₹200 FOR TWO",
-                deliveryTime: 49,
-                minDeliveryTime: 49,
-                maxDeliveryTime: 49,
-                slaString: "49 MINS",
-                lastMileTravel: 8.699999809265137,
-                slugs: {
-                    restaurant: "la-pino'z-madhapur-madhapur",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "Bizness Square 16, Hitech City Rd, Laxmi Cyber City, Whitefields, HITEC City, Hyderabad, Telangana 500081",
-                locality: "Madhapur",
-                parentId: 4961,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "8.6 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "221756",
-                    deliveryTime: 49,
-                    minDeliveryTime: 49,
-                    maxDeliveryTime: 49,
-                    lastMileTravel: 8.699999809265137,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.9",
-                totalRatings: 5000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "436805",
-                name: "Lucky Multicuisine Restaurant",
-                uuid: "ff39450a-e0b0-440b-8ff4-d5dfe4359dbb",
-                city: "3",
-                area: "Madhapur",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "n2kt3noplim3agty9ox8",
-                cuisines: [
-                    "Biryani",
-                    "North Indian",
-                    "Tandoor",
-                    "South Indian"
-                ],
-                tags: [],
-                costForTwo: 40000,
-                costForTwoString: "₹400 FOR TWO",
-                deliveryTime: 38,
-                minDeliveryTime: 35,
-                maxDeliveryTime: 45,
-                slaString: "35-45 MINS",
-                lastMileTravel: 10.100000381469727,
-                slugs: {
-                    restaurant: "lucky-multicuisine-restaurant-madhapur-madhapur",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "1-74/2, Guttalabegumpet, Madhapur, Hyderabad - 500019",
-                locality: "Guttalabegumpet",
-                parentId: 18963,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "10.1 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "436805",
-                    deliveryTime: 38,
-                    minDeliveryTime: 35,
-                    maxDeliveryTime: 45,
-                    lastMileTravel: 10.100000381469727,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.5",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "342975",
-                name: "Warm N Spice",
-                uuid: "e8a56b5c-0fd9-4a16-b2c4-612155deea80",
-                city: "3",
-                area: "Gowlidoddy",
-                totalRatingsString: "100+ ratings",
-                cloudinaryImageId: "raysqzdfh5qdimdrnl5b",
-                cuisines: [
-                    "Indian",
-                    "Chinese",
-                    "Tandoor"
-                ],
-                tags: [],
-                costForTwo: 39900,
-                costForTwoString: "₹399 FOR TWO",
-                deliveryTime: 23,
-                minDeliveryTime: 23,
-                maxDeliveryTime: 23,
-                slaString: "23 MINS",
-                lastMileTravel: 4.199999809265137,
-                slugs: {
-                    restaurant: "warm-n-spice-nanakramguda-nanakramguda",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "Karachi Bakery, Q City Road, Gowlidoddy, Hyderabad, Telangana, India",
-                locality: "Nanakramguda",
-                parentId: 225314,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "4.1 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "342975",
-                    deliveryTime: 23,
-                    minDeliveryTime: 23,
-                    maxDeliveryTime: 23,
-                    lastMileTravel: 4.199999809265137,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.6",
-                totalRatings: 100,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "1866",
-                name: "Being Hungry",
-                uuid: "27b9b060-0309-4dc8-b9ac-15e5b2b8c108",
-                city: "3",
-                area: "Financial District",
-                totalRatingsString: "500+ ratings",
-                cloudinaryImageId: "tvcngaaagxlkg97le9tu",
-                cuisines: [
-                    "North Indian",
-                    "Chinese"
-                ],
-                tags: [],
-                costForTwo: 40000,
-                costForTwoString: "₹400 FOR TWO",
-                deliveryTime: 33,
-                minDeliveryTime: 33,
-                maxDeliveryTime: 33,
-                slaString: "33 MINS",
-                lastMileTravel: 5.5,
-                slugs: {
-                    restaurant: "being-hungry-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "Behind Waverock Building, nanakeramguda, Gachibowli.",
-                locality: "Nanakramguda",
-                parentId: 105,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "5.5 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "1866",
-                    deliveryTime: 33,
-                    minDeliveryTime: 33,
-                    maxDeliveryTime: 33,
-                    lastMileTravel: 5.5,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.9",
-                totalRatings: 500,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "214621",
-                name: "Rollsking",
-                uuid: "e1206571-72fa-4ea8-8b2d-6e6d200f4135",
-                city: "3",
-                area: "Gachibowli",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "x7fjsgevedky2celpnth",
-                cuisines: [
-                    "Fast Food",
-                    "North Indian"
-                ],
-                tags: [],
-                costForTwo: 25000,
-                costForTwoString: "₹250 FOR TWO",
-                deliveryTime: 27,
-                minDeliveryTime: 27,
-                maxDeliveryTime: 27,
-                slaString: "27 MINS",
-                lastMileTravel: 2.0999999046325684,
-                slugs: {
-                    restaurant: "rollsking-gachibowli-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "9-1-541,	shopno	1,	TNGOs	Colony,	Hyderabad, Gachibowli,	Telangana	500042,	Hyderabad",
-                locality: "Tngos Colony",
-                parentId: 4697,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 0,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "2 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "214621",
-                    deliveryTime: 27,
-                    minDeliveryTime: 27,
-                    maxDeliveryTime: 27,
-                    lastMileTravel: 2.0999999046325684,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "NOT_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "4.4",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "509724",
-                name: "Ishtar Shawarma & More",
-                uuid: "82478496-798e-437a-a2ac-869c4da3abf7",
-                city: "3",
-                area: "Madhapur",
-                totalRatingsString: "100+ ratings",
-                cloudinaryImageId: "bt1vvznfmyugff079yzm",
-                cuisines: [
-                    "Arabian",
-                    "Lebanese",
-                    "Mediterranean"
-                ],
-                tags: [],
-                costForTwo: 30000,
-                costForTwoString: "₹300 FOR TWO",
-                deliveryTime: 41,
-                minDeliveryTime: 40,
-                maxDeliveryTime: 50,
-                slaString: "40-50 MINS",
-                lastMileTravel: 10.800000190734863,
-                slugs: {
-                    restaurant: "ishtar-shawarma's-&-more-madhapur-madhapur",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "H:NO.14-1-211/530/A, parvathnagar, Near  Auto stand, Serlingampally Circle No 20, MADHAPUR, Hyderabad, Telangana - 500081",
-                locality: "Madhapur",
-                parentId: 364918,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "10.8 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "509724",
-                    deliveryTime: 41,
-                    minDeliveryTime: 40,
-                    maxDeliveryTime: 50,
-                    lastMileTravel: 10.800000190734863,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "4.3",
-                totalRatings: 100,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "47120",
-                name: "Istah Shawarma",
-                uuid: "26a2a4f5-fba8-462e-b2bc-30a5c923b08f",
-                city: "3",
-                area: "Gachibowli",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "67d4a416bf932f850b0a15ad33aae762",
-                cuisines: [
-                    "Arabian",
-                    "Lebanese",
-                    "Snacks",
-                    "Beverages"
-                ],
-                tags: [],
-                costForTwo: 25000,
-                costForTwoString: "₹250 FOR TWO",
-                deliveryTime: 23,
-                minDeliveryTime: 23,
-                maxDeliveryTime: 23,
-                slaString: "23 MINS",
-                lastMileTravel: 2.700000047683716,
-                slugs: {
-                    restaurant: "istah-grills-and-more-gachibowli-gachibowli",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "Plot NO. 170, Ground Floor, TNGOs Colony, Manikonda Jagir, Serilingampally Mandal, Rangareddi, Telangana-500089",
-                locality: "Indira Nagar",
-                parentId: 3518,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                ribbon: [
-                    {
-                        type: "EXCLUSIVE"
-                    }
-                ],
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 0,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "2.7 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "47120",
-                    deliveryTime: 23,
-                    minDeliveryTime: 23,
-                    maxDeliveryTime: 23,
-                    lastMileTravel: 2.700000047683716,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "NOT_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "4.3",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "414009",
-                name: "The Masala House",
-                uuid: "40307332-fb91-4039-8613-cba9977e8462",
-                city: "3",
-                area: "Madhapur",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "qpd3rhq2eukkvnuirmsa",
-                cuisines: [
-                    "Chinese",
-                    "North Indian",
-                    "Biryani",
-                    "Kebabs",
-                    "Tandoor"
-                ],
-                tags: [],
-                costForTwo: 30000,
-                costForTwoString: "₹300 FOR TWO",
-                deliveryTime: 42,
-                minDeliveryTime: 40,
-                maxDeliveryTime: 50,
-                slaString: "40-50 MINS",
-                lastMileTravel: 10.300000190734863,
-                slugs: {
-                    restaurant: "the-masala-house-madhapur-madhapur",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "Kraft Kitchen, plot no 15, Century Hills, Bhagyanagar Cooperative housing Society, Ayyappa Society Road, Madhapur, Telangana, 500081",
-                locality: "Madhapur",
-                parentId: 257745,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "10.3 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "414009",
-                    deliveryTime: 42,
-                    minDeliveryTime: 40,
-                    maxDeliveryTime: 50,
-                    lastMileTravel: 10.300000190734863,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.8",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        },
-        {
-            type: "restaurant",
-            data: {
-                type: "F",
-                id: "263535",
-                name: "SaiRam Ki Bandi",
-                uuid: "85c6a973-4e34-4909-8e38-3318ea4c77bb",
-                city: "3",
-                area: "Circle No.11 (Serilingampally  1)",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "rmcl7tixfs9owmfw2f8e",
-                cuisines: [
-                    "South Indian",
-                    "Juices"
-                ],
-                tags: [],
-                costForTwo: 15000,
-                costForTwoString: "₹150 FOR TWO",
-                deliveryTime: 43,
-                minDeliveryTime: 40,
-                maxDeliveryTime: 50,
-                slaString: "40-50 MINS",
-                lastMileTravel: 10.899999618530273,
-                slugs: {
-                    restaurant: "sairam-ki-bandi-madhapur-madhapur",
-                    city: "hyderabad"
-                },
-                cityState: "3",
-                address: "plot 17, megana towers, ground floor, sbi bank building,madhapur,Hyderabad , Circle No.11",
-                locality: "Circle No.11 (Serilingampally-1)",
-                parentId: 175822,
-                unserviceable: false,
-                veg: false,
-                select: false,
-                favorite: false,
-                tradeCampaignHeaders: [],
-                aggregatedDiscountInfo: {
-                    header: "50% off",
-                    shortDescriptionList: [
-                        {
-                            meta: "50% off | Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                aggregatedDiscountInfoV2: {
-                    header: "50% OFF",
-                    shortDescriptionList: [
-                        {
-                            meta: "Use WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    descriptionList: [
-                        {
-                            meta: "50% off up to ₹100 | Use code WELCOME50",
-                            discountType: "Percentage",
-                            operationType: "RESTAURANT"
-                        }
-                    ],
-                    subHeader: "",
-                    headerType: 0,
-                    superFreedel: ""
-                },
-                chain: [],
-                feeDetails: {
-                    fees: [],
-                    totalFees: 0,
-                    message: "",
-                    title: "",
-                    amount: "",
-                    icon: ""
-                },
-                availability: {
-                    opened: true,
-                    nextOpenMessage: "",
-                    nextCloseMessage: ""
-                },
-                longDistanceEnabled: 1,
-                rainMode: "NONE",
-                thirdPartyAddress: false,
-                thirdPartyVendor: "",
-                adTrackingID: "",
-                badges: {
-                    imageBased: [],
-                    textBased: [],
-                    textExtendedBadges: []
-                },
-                lastMileTravelString: "10.8 kms",
-                hasSurge: false,
-                sla: {
-                    restaurantId: "263535",
-                    deliveryTime: 43,
-                    minDeliveryTime: 40,
-                    maxDeliveryTime: 50,
-                    lastMileTravel: 10.899999618530273,
-                    lastMileDistance: 0,
-                    serviceability: "SERVICEABLE",
-                    rainMode: "NONE",
-                    longDistance: "IT_IS_LONG_DISTANCE",
-                    preferentialService: false,
-                    iconType: "EMPTY"
-                },
-                promoted: false,
-                avgRating: "3.8",
-                totalRatings: 1000,
-                new: false
-            },
-            subtype: "basic"
-        }
-    ]
-};
-exports.default = restaurantData;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hBsvF":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$aec6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$aec6.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const ShimmerUi = function() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 5,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 6,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 7,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 26,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 24,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 30,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 31,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 32,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 29,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 37,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 34,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 40,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 42,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 39,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 45,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 44,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-img"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 50,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-content"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 51,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card-details"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerUi.js",
-                        lineNumber: 52,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerUi.js",
-                lineNumber: 49,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true);
-};
-_c = ShimmerUi;
-exports.default = ShimmerUi;
-var _c;
-$RefreshReg$(_c, "ShimmerUi");
-
-  $parcel$ReactRefreshHelpers$aec6.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jqPPz":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8a55.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _s = $RefreshSig$();
-const Search = (props)=>{
-    _s();
-    const [searchText, setSearchText] = (0, _react.useState)("");
-    const { allRestaurant , filterHandler  } = props;
-    const getRestaurant = (e)=>{
-        if (e.key === "Enter") getFilteredRestaurant();
-    };
-    const getFilteredRestaurant = ()=>{
-        const searchVal = searchText;
-        setSearchText("");
-        // allRestaurant.forEach((restaurant) => {
-        //   console.log(restaurant.data.name);
-        // });
-        const filteredRestaurant = allRestaurant.filter((restaurant)=>restaurant?.data?.name.toLowerCase().includes(searchVal.toLowerCase()));
-        filterHandler(filteredRestaurant);
-    };
-    const getSearchValue = (e)=>{
-        setSearchText(e.target.value);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                className: "input-search",
-                type: "text",
-                value: searchText,
-                placeholder: "Search",
-                onChange: getSearchValue,
-                onKeyDown: getRestaurant
-            }, void 0, false, {
-                fileName: "src/components/Search.js",
-                lineNumber: 33,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "search-btn",
-                onClick: getFilteredRestaurant,
-                children: "Search"
-            }, void 0, false, {
-                fileName: "src/components/Search.js",
-                lineNumber: 41,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Search, "OAGvOw28fBJQW7HtXCjc9nvla2M=");
-_c = Search;
-exports.default = Search;
-var _c;
-$RefreshReg$(_c, "Search");
-
-  $parcel$ReactRefreshHelpers$8a55.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "footer",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-            className: "footer-header",
-            children: "Thank you for visting our site \uD83D\uDE0A\uD83D\uDE0A"
-        }, void 0, false, {
-            fileName: "src/components/Footer.js",
-            lineNumber: 4,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"4b636f61b3703417":"786KC"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.6.2
  *
@@ -34572,7 +32205,2479 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9R1Eu":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _config = require("../utils/config");
+var _configDefault = parcelHelpers.interopDefault(_config);
+var _react = require("react");
+var _shimmerUi = require("./ShimmerUi");
+var _shimmerUiDefault = parcelHelpers.interopDefault(_shimmerUi);
+var _search = require("./Search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const RestaurantCard = (props)=>{
+    const { cloudinaryImageId , name , cuisines , avgRating , lastMileTravelString , costForTwoString  } = props.details;
+    const imgUrl = `${(0, _config.IMG_CDN_URL)}${cloudinaryImageId}
+  `;
+    const cuisinesData = cuisines.join(" ,");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restaurant-card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "food-img",
+                src: imgUrl,
+                alt: ""
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "restaurant-name",
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "restaurant-name",
+                children: cuisinesData
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-rating",
+                children: [
+                    " ⭐",
+                    avgRating
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-rating",
+                children: [
+                    " ",
+                    lastMileTravelString
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-rating",
+                children: [
+                    " ",
+                    costForTwoString
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 21,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+const Body = ()=>{
+    _s();
+    const [filteredRestaurant, setFilteredRestaurant] = (0, _react.useState)([]);
+    const [allRestaurant, setAllRestaurant] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        getRestaurantData();
+    }, []);
+    const getRestaurantData = async ()=>{
+        const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.45242&lng=78.33159289999999&page_type=DESKTOP_WEB_LISTING");
+        const data = await response.json();
+        const restaurantList = data?.data?.cards[2]?.data?.data?.cards;
+        setFilteredRestaurant(restaurantList);
+        setAllRestaurant(restaurantList);
+    };
+    const getRestaurantList = (data)=>{
+        setFilteredRestaurant(data);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {
+                allRestaurant: allRestaurant,
+                filterHandler: getRestaurantList
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined),
+            filteredRestaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUiDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 59,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 58,
+                columnNumber: 9
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-container",
+                children: filteredRestaurant.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: restaurant.data.id,
+                        className: "restaurant-link",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                            details: restaurant.data
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 69,
+                            columnNumber: 15
+                        }, undefined)
+                    }, restaurant.data.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 64,
+                        columnNumber: 13
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 62,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 55,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Body, "2T43NnCoa3pVDXnKP+4gz82GEKQ=");
+_c1 = Body;
+exports.default = Body;
+var _c, _c1;
+$RefreshReg$(_c, "RestaurantCard");
+$RefreshReg$(_c1, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../utils/config":"4LaEY","react":"21dqq","./ShimmerUi":"hBsvF","./Search":"jqPPz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"4LaEY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const restaurantData = {
+    cards: [
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "218068",
+                name: "Mehfil",
+                uuid: "c9213116-1e89-4cb3-81a9-b11f2d838fd3",
+                city: "3",
+                area: "Gachibowli",
+                totalRatingsString: "10000+ ratings",
+                cloudinaryImageId: "rfngxpkeablm4ses3d0j",
+                cuisines: [
+                    "Biryani",
+                    "Chinese",
+                    "Indian",
+                    "Kebabs",
+                    "Tandoor",
+                    "Desserts"
+                ],
+                tags: [],
+                costForTwo: 30000,
+                costForTwoString: "₹300 FOR TWO",
+                deliveryTime: 38,
+                minDeliveryTime: 38,
+                maxDeliveryTime: 38,
+                slaString: "38 MINS",
+                lastMileTravel: 4.5,
+                slugs: {
+                    restaurant: "mehfil-gachibowli-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "3rd Floor, 2-37/VN/140/A/ Sri Mallikarjuna Towers, Gachibowli Road, Vinayak Nagar, Indira Nagar,  Gachibowli",
+                locality: "Vinayak Nagar",
+                parentId: 637,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "4.5 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "218068",
+                    deliveryTime: 38,
+                    minDeliveryTime: 38,
+                    maxDeliveryTime: 38,
+                    lastMileTravel: 4.5,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.8",
+                totalRatings: 10000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "137034",
+                name: "Shah Ghouse Spl Shawarma",
+                uuid: "6db9d674-565f-472f-a09a-e0789f767fc6",
+                city: "3",
+                area: "Gachibowli",
+                totalRatingsString: "5000+ ratings",
+                cloudinaryImageId: "kmzr7zp4djhuk66wdbsc",
+                cuisines: [
+                    "Lebanese",
+                    "Tandoor"
+                ],
+                tags: [],
+                costForTwo: 30000,
+                costForTwoString: "₹300 FOR TWO",
+                deliveryTime: 40,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 40,
+                slaString: "40 MINS",
+                lastMileTravel: 7.599999904632568,
+                slugs: {
+                    restaurant: "shah-ghouse-spl-shawarma-gachibowli-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "8-191/15, Opposite Bio Diversity Park, Raidurgam, Madhura Nagar Colony, Gachibowli, Hyderabad",
+                locality: "Opposite Bio Diversity Park",
+                parentId: 19255,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "7.5 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "137034",
+                    deliveryTime: 40,
+                    minDeliveryTime: 40,
+                    maxDeliveryTime: 40,
+                    lastMileTravel: 7.599999904632568,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "4.0",
+                totalRatings: 5000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "120129",
+                name: "Shah Ghouse Hotel",
+                uuid: "a3177899-355f-4109-8a1f-b24b31afbcd8",
+                city: "3",
+                area: "Land Mark Residency",
+                totalRatingsString: "5000+ ratings",
+                cloudinaryImageId: "von4k7mxgbgv0w58apx6",
+                cuisines: [
+                    "Biryani",
+                    "North Indian",
+                    "Chinese",
+                    "Mughlai",
+                    "Tandoor"
+                ],
+                tags: [],
+                costForTwo: 30000,
+                costForTwoString: "₹300 FOR TWO",
+                deliveryTime: 36,
+                minDeliveryTime: 36,
+                maxDeliveryTime: 36,
+                slaString: "36 MINS",
+                lastMileTravel: 6.800000190734863,
+                slugs: {
+                    restaurant: "shah-ghouse-hotel-restaurant-kondapur-kondapur",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "2-25/A, Beside Apollo Hospital, Near Kondapur Kothaguda 'X' Road, Kondapur, Hyderabad",
+                locality: "Kothaguda 'X' Road",
+                parentId: 19271,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "6.8 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "120129",
+                    deliveryTime: 36,
+                    minDeliveryTime: 36,
+                    maxDeliveryTime: 36,
+                    lastMileTravel: 6.800000190734863,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.9",
+                totalRatings: 5000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "328934",
+                name: "Raju Gari Biryani",
+                uuid: "231bf7de-b635-424a-a70d-dc203ea81616",
+                city: "3",
+                area: "Shaikpet",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "ymiu9cp97z3tow0kknlv",
+                cuisines: [
+                    "Biryani",
+                    "North Indian",
+                    "Snacks",
+                    "Mughlai",
+                    "Chinese"
+                ],
+                tags: [],
+                costForTwo: 20000,
+                costForTwoString: "₹200 FOR TWO",
+                deliveryTime: 39,
+                minDeliveryTime: 35,
+                maxDeliveryTime: 45,
+                slaString: "35-45 MINS",
+                lastMileTravel: 10.5,
+                slugs: {
+                    restaurant: "rajugaribiryani-manikonda-manikonda",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "483, OU Colony, Shaikpet, Hyderabad, Telangana 500008, India",
+                locality: "Manikonda",
+                parentId: 165947,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "10.5 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "328934",
+                    deliveryTime: 39,
+                    minDeliveryTime: 35,
+                    maxDeliveryTime: 45,
+                    lastMileTravel: 10.5,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.8",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "34444",
+                name: "Pakwaan Grand",
+                uuid: "edf140b3-8dd2-47c0-8f8d-7e161a8bfe3f",
+                city: "3",
+                area: "Gachibowli",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "mkmmacm0pxdt61gz0m4y",
+                cuisines: [
+                    "North Indian",
+                    "Chinese",
+                    "Biryani",
+                    "Tandoor"
+                ],
+                tags: [],
+                costForTwo: 30000,
+                costForTwoString: "₹300 FOR TWO",
+                deliveryTime: 41,
+                minDeliveryTime: 41,
+                maxDeliveryTime: 41,
+                slaString: "41 MINS",
+                lastMileTravel: 7.800000190734863,
+                slugs: {
+                    restaurant: "pakwaan-grand-gachibowli-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "Near Rai Durgam police Station,Gachibowli, Main Road, Gachibowli, Hyderabad",
+                locality: "Rai Durgam police Station",
+                parentId: 19911,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "7.8 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "34444",
+                    deliveryTime: 41,
+                    minDeliveryTime: 41,
+                    maxDeliveryTime: 41,
+                    lastMileTravel: 7.800000190734863,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.6",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "161469",
+                name: "S.K. Shawarma",
+                uuid: "a11e1210-5c15-4a43-9e56-9a8019de8770",
+                city: "3",
+                area: "Gachibowli",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "vpjfqqzbllzvxjj52djl",
+                cuisines: [
+                    "Arabian",
+                    "Fast Food"
+                ],
+                tags: [],
+                costForTwo: 20000,
+                costForTwoString: "₹200 FOR TWO",
+                deliveryTime: 29,
+                minDeliveryTime: 29,
+                maxDeliveryTime: 29,
+                slaString: "29 MINS",
+                lastMileTravel: 4.900000095367432,
+                slugs: {
+                    restaurant: "sk-shawarma-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "SK Shawarma, DLF Gate No 1, Gachibowli",
+                locality: "DLF Gate No 1",
+                parentId: 387848,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "4.9 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "161469",
+                    deliveryTime: 29,
+                    minDeliveryTime: 29,
+                    maxDeliveryTime: 29,
+                    lastMileTravel: 4.900000095367432,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.8",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "221756",
+                name: "La Pino'z Pizza",
+                uuid: "919f06a0-8675-400f-bc84-250aa159a247",
+                city: "3",
+                area: "Hitec City",
+                totalRatingsString: "5000+ ratings",
+                cloudinaryImageId: "rgjfx1v2hapqnutnxazg",
+                cuisines: [
+                    "Pizzas",
+                    "Italian",
+                    "Beverages",
+                    "Snacks"
+                ],
+                tags: [],
+                costForTwo: 20000,
+                costForTwoString: "₹200 FOR TWO",
+                deliveryTime: 49,
+                minDeliveryTime: 49,
+                maxDeliveryTime: 49,
+                slaString: "49 MINS",
+                lastMileTravel: 8.699999809265137,
+                slugs: {
+                    restaurant: "la-pino'z-madhapur-madhapur",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "Bizness Square 16, Hitech City Rd, Laxmi Cyber City, Whitefields, HITEC City, Hyderabad, Telangana 500081",
+                locality: "Madhapur",
+                parentId: 4961,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "8.6 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "221756",
+                    deliveryTime: 49,
+                    minDeliveryTime: 49,
+                    maxDeliveryTime: 49,
+                    lastMileTravel: 8.699999809265137,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.9",
+                totalRatings: 5000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "436805",
+                name: "Lucky Multicuisine Restaurant",
+                uuid: "ff39450a-e0b0-440b-8ff4-d5dfe4359dbb",
+                city: "3",
+                area: "Madhapur",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "n2kt3noplim3agty9ox8",
+                cuisines: [
+                    "Biryani",
+                    "North Indian",
+                    "Tandoor",
+                    "South Indian"
+                ],
+                tags: [],
+                costForTwo: 40000,
+                costForTwoString: "₹400 FOR TWO",
+                deliveryTime: 38,
+                minDeliveryTime: 35,
+                maxDeliveryTime: 45,
+                slaString: "35-45 MINS",
+                lastMileTravel: 10.100000381469727,
+                slugs: {
+                    restaurant: "lucky-multicuisine-restaurant-madhapur-madhapur",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "1-74/2, Guttalabegumpet, Madhapur, Hyderabad - 500019",
+                locality: "Guttalabegumpet",
+                parentId: 18963,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "10.1 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "436805",
+                    deliveryTime: 38,
+                    minDeliveryTime: 35,
+                    maxDeliveryTime: 45,
+                    lastMileTravel: 10.100000381469727,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.5",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "342975",
+                name: "Warm N Spice",
+                uuid: "e8a56b5c-0fd9-4a16-b2c4-612155deea80",
+                city: "3",
+                area: "Gowlidoddy",
+                totalRatingsString: "100+ ratings",
+                cloudinaryImageId: "raysqzdfh5qdimdrnl5b",
+                cuisines: [
+                    "Indian",
+                    "Chinese",
+                    "Tandoor"
+                ],
+                tags: [],
+                costForTwo: 39900,
+                costForTwoString: "₹399 FOR TWO",
+                deliveryTime: 23,
+                minDeliveryTime: 23,
+                maxDeliveryTime: 23,
+                slaString: "23 MINS",
+                lastMileTravel: 4.199999809265137,
+                slugs: {
+                    restaurant: "warm-n-spice-nanakramguda-nanakramguda",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "Karachi Bakery, Q City Road, Gowlidoddy, Hyderabad, Telangana, India",
+                locality: "Nanakramguda",
+                parentId: 225314,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "4.1 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "342975",
+                    deliveryTime: 23,
+                    minDeliveryTime: 23,
+                    maxDeliveryTime: 23,
+                    lastMileTravel: 4.199999809265137,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.6",
+                totalRatings: 100,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "1866",
+                name: "Being Hungry",
+                uuid: "27b9b060-0309-4dc8-b9ac-15e5b2b8c108",
+                city: "3",
+                area: "Financial District",
+                totalRatingsString: "500+ ratings",
+                cloudinaryImageId: "tvcngaaagxlkg97le9tu",
+                cuisines: [
+                    "North Indian",
+                    "Chinese"
+                ],
+                tags: [],
+                costForTwo: 40000,
+                costForTwoString: "₹400 FOR TWO",
+                deliveryTime: 33,
+                minDeliveryTime: 33,
+                maxDeliveryTime: 33,
+                slaString: "33 MINS",
+                lastMileTravel: 5.5,
+                slugs: {
+                    restaurant: "being-hungry-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "Behind Waverock Building, nanakeramguda, Gachibowli.",
+                locality: "Nanakramguda",
+                parentId: 105,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "5.5 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "1866",
+                    deliveryTime: 33,
+                    minDeliveryTime: 33,
+                    maxDeliveryTime: 33,
+                    lastMileTravel: 5.5,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.9",
+                totalRatings: 500,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "214621",
+                name: "Rollsking",
+                uuid: "e1206571-72fa-4ea8-8b2d-6e6d200f4135",
+                city: "3",
+                area: "Gachibowli",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "x7fjsgevedky2celpnth",
+                cuisines: [
+                    "Fast Food",
+                    "North Indian"
+                ],
+                tags: [],
+                costForTwo: 25000,
+                costForTwoString: "₹250 FOR TWO",
+                deliveryTime: 27,
+                minDeliveryTime: 27,
+                maxDeliveryTime: 27,
+                slaString: "27 MINS",
+                lastMileTravel: 2.0999999046325684,
+                slugs: {
+                    restaurant: "rollsking-gachibowli-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "9-1-541,	shopno	1,	TNGOs	Colony,	Hyderabad, Gachibowli,	Telangana	500042,	Hyderabad",
+                locality: "Tngos Colony",
+                parentId: 4697,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 0,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "2 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "214621",
+                    deliveryTime: 27,
+                    minDeliveryTime: 27,
+                    maxDeliveryTime: 27,
+                    lastMileTravel: 2.0999999046325684,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "NOT_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "4.4",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "509724",
+                name: "Ishtar Shawarma & More",
+                uuid: "82478496-798e-437a-a2ac-869c4da3abf7",
+                city: "3",
+                area: "Madhapur",
+                totalRatingsString: "100+ ratings",
+                cloudinaryImageId: "bt1vvznfmyugff079yzm",
+                cuisines: [
+                    "Arabian",
+                    "Lebanese",
+                    "Mediterranean"
+                ],
+                tags: [],
+                costForTwo: 30000,
+                costForTwoString: "₹300 FOR TWO",
+                deliveryTime: 41,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 50,
+                slaString: "40-50 MINS",
+                lastMileTravel: 10.800000190734863,
+                slugs: {
+                    restaurant: "ishtar-shawarma's-&-more-madhapur-madhapur",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "H:NO.14-1-211/530/A, parvathnagar, Near  Auto stand, Serlingampally Circle No 20, MADHAPUR, Hyderabad, Telangana - 500081",
+                locality: "Madhapur",
+                parentId: 364918,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "10.8 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "509724",
+                    deliveryTime: 41,
+                    minDeliveryTime: 40,
+                    maxDeliveryTime: 50,
+                    lastMileTravel: 10.800000190734863,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "4.3",
+                totalRatings: 100,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "47120",
+                name: "Istah Shawarma",
+                uuid: "26a2a4f5-fba8-462e-b2bc-30a5c923b08f",
+                city: "3",
+                area: "Gachibowli",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "67d4a416bf932f850b0a15ad33aae762",
+                cuisines: [
+                    "Arabian",
+                    "Lebanese",
+                    "Snacks",
+                    "Beverages"
+                ],
+                tags: [],
+                costForTwo: 25000,
+                costForTwoString: "₹250 FOR TWO",
+                deliveryTime: 23,
+                minDeliveryTime: 23,
+                maxDeliveryTime: 23,
+                slaString: "23 MINS",
+                lastMileTravel: 2.700000047683716,
+                slugs: {
+                    restaurant: "istah-grills-and-more-gachibowli-gachibowli",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "Plot NO. 170, Ground Floor, TNGOs Colony, Manikonda Jagir, Serilingampally Mandal, Rangareddi, Telangana-500089",
+                locality: "Indira Nagar",
+                parentId: 3518,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                ribbon: [
+                    {
+                        type: "EXCLUSIVE"
+                    }
+                ],
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 0,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "2.7 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "47120",
+                    deliveryTime: 23,
+                    minDeliveryTime: 23,
+                    maxDeliveryTime: 23,
+                    lastMileTravel: 2.700000047683716,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "NOT_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "4.3",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "414009",
+                name: "The Masala House",
+                uuid: "40307332-fb91-4039-8613-cba9977e8462",
+                city: "3",
+                area: "Madhapur",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "qpd3rhq2eukkvnuirmsa",
+                cuisines: [
+                    "Chinese",
+                    "North Indian",
+                    "Biryani",
+                    "Kebabs",
+                    "Tandoor"
+                ],
+                tags: [],
+                costForTwo: 30000,
+                costForTwoString: "₹300 FOR TWO",
+                deliveryTime: 42,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 50,
+                slaString: "40-50 MINS",
+                lastMileTravel: 10.300000190734863,
+                slugs: {
+                    restaurant: "the-masala-house-madhapur-madhapur",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "Kraft Kitchen, plot no 15, Century Hills, Bhagyanagar Cooperative housing Society, Ayyappa Society Road, Madhapur, Telangana, 500081",
+                locality: "Madhapur",
+                parentId: 257745,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "10.3 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "414009",
+                    deliveryTime: 42,
+                    minDeliveryTime: 40,
+                    maxDeliveryTime: 50,
+                    lastMileTravel: 10.300000190734863,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.8",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        },
+        {
+            type: "restaurant",
+            data: {
+                type: "F",
+                id: "263535",
+                name: "SaiRam Ki Bandi",
+                uuid: "85c6a973-4e34-4909-8e38-3318ea4c77bb",
+                city: "3",
+                area: "Circle No.11 (Serilingampally  1)",
+                totalRatingsString: "1000+ ratings",
+                cloudinaryImageId: "rmcl7tixfs9owmfw2f8e",
+                cuisines: [
+                    "South Indian",
+                    "Juices"
+                ],
+                tags: [],
+                costForTwo: 15000,
+                costForTwoString: "₹150 FOR TWO",
+                deliveryTime: 43,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 50,
+                slaString: "40-50 MINS",
+                lastMileTravel: 10.899999618530273,
+                slugs: {
+                    restaurant: "sairam-ki-bandi-madhapur-madhapur",
+                    city: "hyderabad"
+                },
+                cityState: "3",
+                address: "plot 17, megana towers, ground floor, sbi bank building,madhapur,Hyderabad , Circle No.11",
+                locality: "Circle No.11 (Serilingampally-1)",
+                parentId: 175822,
+                unserviceable: false,
+                veg: false,
+                select: false,
+                favorite: false,
+                tradeCampaignHeaders: [],
+                aggregatedDiscountInfo: {
+                    header: "50% off",
+                    shortDescriptionList: [
+                        {
+                            meta: "50% off | Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                aggregatedDiscountInfoV2: {
+                    header: "50% OFF",
+                    shortDescriptionList: [
+                        {
+                            meta: "Use WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    descriptionList: [
+                        {
+                            meta: "50% off up to ₹100 | Use code WELCOME50",
+                            discountType: "Percentage",
+                            operationType: "RESTAURANT"
+                        }
+                    ],
+                    subHeader: "",
+                    headerType: 0,
+                    superFreedel: ""
+                },
+                chain: [],
+                feeDetails: {
+                    fees: [],
+                    totalFees: 0,
+                    message: "",
+                    title: "",
+                    amount: "",
+                    icon: ""
+                },
+                availability: {
+                    opened: true,
+                    nextOpenMessage: "",
+                    nextCloseMessage: ""
+                },
+                longDistanceEnabled: 1,
+                rainMode: "NONE",
+                thirdPartyAddress: false,
+                thirdPartyVendor: "",
+                adTrackingID: "",
+                badges: {
+                    imageBased: [],
+                    textBased: [],
+                    textExtendedBadges: []
+                },
+                lastMileTravelString: "10.8 kms",
+                hasSurge: false,
+                sla: {
+                    restaurantId: "263535",
+                    deliveryTime: 43,
+                    minDeliveryTime: 40,
+                    maxDeliveryTime: 50,
+                    lastMileTravel: 10.899999618530273,
+                    lastMileDistance: 0,
+                    serviceability: "SERVICEABLE",
+                    rainMode: "NONE",
+                    longDistance: "IT_IS_LONG_DISTANCE",
+                    preferentialService: false,
+                    iconType: "EMPTY"
+                },
+                promoted: false,
+                avgRating: "3.8",
+                totalRatings: 1000,
+                new: false
+            },
+            subtype: "basic"
+        }
+    ]
+};
+exports.default = restaurantData;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hBsvF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$aec6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$aec6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerUi = function() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 5,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 6,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 7,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 39,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 46,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 47,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-content"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-card-details"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerUi.js",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerUi.js",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
+};
+_c = ShimmerUi;
+exports.default = ShimmerUi;
+var _c;
+$RefreshReg$(_c, "ShimmerUi");
+
+  $parcel$ReactRefreshHelpers$aec6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jqPPz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8a55.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const Search = (props)=>{
+    _s();
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    const { allRestaurant , filterHandler  } = props;
+    const getRestaurant = (e)=>{
+        if (e.key === "Enter") getFilteredRestaurant();
+    };
+    const getFilteredRestaurant = ()=>{
+        const searchVal = searchText;
+        setSearchText("");
+        // allRestaurant.forEach((restaurant) => {
+        //   console.log(restaurant.data.name);
+        // });
+        const filteredRestaurant = allRestaurant.filter((restaurant)=>restaurant?.data?.name.toLowerCase().includes(searchVal.toLowerCase()));
+        filterHandler(filteredRestaurant);
+    };
+    const getSearchValue = (e)=>{
+        setSearchText(e.target.value);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                className: "input-search",
+                type: "text",
+                value: searchText,
+                placeholder: "Search",
+                onChange: getSearchValue,
+                onKeyDown: getRestaurant
+            }, void 0, false, {
+                fileName: "src/components/Search.js",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "search-btn",
+                onClick: getFilteredRestaurant,
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/components/Search.js",
+                lineNumber: 41,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Search, "OAGvOw28fBJQW7HtXCjc9nvla2M=");
+_c = Search;
+exports.default = Search;
+var _c;
+$RefreshReg$(_c, "Search");
+
+  $parcel$ReactRefreshHelpers$8a55.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "footer",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            className: "footer-header",
+            children: "Thank you for visting our site \uD83D\uDE0A\uD83D\uDE0A"
+        }, void 0, false, {
+            fileName: "src/components/Footer.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34612,6 +34717,414 @@ var _c;
 $RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$5b98.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0ba4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const Error = ()=>{
+    _s();
+    const error = (0, _reactRouterDom.useRouteError)();
+    console.log(error);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Oops"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Somethimg went wrong"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: error.status
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: error.statusText
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Error, "oAgjgbJzsRXlB89+MoVumxMQqKM=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ee46.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "This is contact page"
+            }, void 0, false, {
+                fileName: "src/components/Contact.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "This page is under construction"
+            }, void 0, false, {
+                fileName: "src/components/Contact.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Contact.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$ee46.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8PuJ6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$40d6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$40d6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _config = require("../utils/config");
+var _shimmerMenu = require("./ShimmerMenu");
+var _shimmerMenuDefault = parcelHelpers.interopDefault(_shimmerMenu);
+var _s = $RefreshSig$();
+const RestaurantMenu = ()=>{
+    _s();
+    const params = (0, _reactRouterDom.useParams)();
+    const [menuData, setMenuData] = (0, _react.useState)("");
+    const getRestaurantMenu = async ()=>{
+        const response = await fetch(`https://www.swiggy.com/dapi/menu/v4/full?lat=17.45242&lng=78.33159289999999&menuId=${params.id}`);
+        const data = await response.json();
+        console.log(data);
+        setMenuData(data.data);
+    };
+    (0, _react.useState)(()=>{
+        getRestaurantMenu();
+    }, []);
+    const items = {
+        ...menuData?.menu?.items
+    };
+    const itemsArray = Object.values(items);
+    console.log(itemsArray);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: !menuData ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerMenuDefault.default), {}, void 0, false, {
+            fileName: "src/components/RestaurantMenu.js",
+            lineNumber: 30,
+            columnNumber: 9
+        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "menu-card",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "menu-image",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "menu-ref-img",
+                                src: `${(0, _config.IMG_CDN_URL)}/${menuData.cloudinaryImageId}`,
+                                alt: ""
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 35,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 34,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "menu-restaurant-name",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: menuData.name
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 42,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    children: menuData.cuisines.join(", ")
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 43,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    children: [
+                                        menuData.locality,
+                                        " "
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 44,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "mini-card",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            class: "mini-grid-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                                    children: menuData.avgRating
+                                                }, void 0, false, {
+                                                    fileName: "src/components/RestaurantMenu.js",
+                                                    lineNumber: 47,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: menuData.totalRatingsString
+                                                }, void 0, false, {
+                                                    fileName: "src/components/RestaurantMenu.js",
+                                                    lineNumber: 48,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/RestaurantMenu.js",
+                                            lineNumber: 46,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "mini-grid-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                                    children: menuData.costForTwoMsg.split(" ")[0]
+                                                }, void 0, false, {
+                                                    fileName: "src/components/RestaurantMenu.js",
+                                                    lineNumber: 55,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: [
+                                                        menuData.costForTwoMsg.split(" ")[1],
+                                                        " ",
+                                                        menuData.costForTwoMsg.split(" ")[2]
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/RestaurantMenu.js",
+                                                    lineNumber: 56,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/RestaurantMenu.js",
+                                            lineNumber: 54,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 45,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 41,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "menu-offer",
+                            children: menuData.offerMeta.map((offer)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: offer.header
+                                }, Math.random(), false, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 65,
+                                    columnNumber: 17
+                                }, undefined))
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 63,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/RestaurantMenu.js",
+                    lineNumber: 33,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "menu-details",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            className: "menu-header",
+                            children: "Recommended"
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 70,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "menu-header",
+                            children: [
+                                `${Object.values(menuData.menu.items).length} items`,
+                                " "
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 71,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                            children: itemsArray.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: item.name
+                                }, item.id, false, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 76,
+                                    columnNumber: 17
+                                }, undefined))
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 74,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/RestaurantMenu.js",
+                    lineNumber: 69,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true)
+    }, void 0, false);
+};
+_s(RestaurantMenu, "1Q1fnPM+GMDHFApk2XozOVWGcmk=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c = RestaurantMenu;
+exports.default = RestaurantMenu;
+var _c;
+$RefreshReg$(_c, "RestaurantMenu");
+
+  $parcel$ReactRefreshHelpers$40d6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","react":"21dqq","../utils/config":"4LaEY","./ShimmerMenu":"he49z"}],"he49z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0611 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0611.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerMenu = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-mnu-card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-details",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerMenu.js",
+                        lineNumber: 5,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerMenu.js",
+                        lineNumber: 6,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-img"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerMenu.js",
+                        lineNumber: 7,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerMenu.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-menu"
+            }, void 0, false, {
+                fileName: "src/components/ShimmerMenu.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ShimmerMenu.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ShimmerMenu;
+exports.default = ShimmerMenu;
+var _c;
+$RefreshReg$(_c, "ShimmerMenu");
+
+  $parcel$ReactRefreshHelpers$0611.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  // const [title, setTitle] = useState("Food Villa");
+  const [login, setLogin] = useState("true");
 
   // const buttonHandler = () => {
   //   setTitle("Naya Title");
   // };
+  const toggleLogin = () => {
+    console.log("button is clicked");
+    login === "true" ? setLogin("false") : setLogin("true");
+  };
 
   console.log("rerender");
   return (
@@ -20,11 +25,26 @@ const Header = () => {
       <button onClick={buttonHandler}>change title</button> */}
       <div className="nav">
         <ul className="nav-bar">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/" className="nav-list">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav-list">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="nav-list">
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
+      <button className="login-btn" onClick={toggleLogin}>
+        {login === "true" ? "Login" : "Logout"}
+      </button>
     </div>
   );
 };

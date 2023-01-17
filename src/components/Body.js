@@ -2,6 +2,7 @@ import restaurantData, { IMG_CDN_URL } from "../utils/config";
 import { useState, useEffect } from "react";
 import ShimmerUi from "./ShimmerUi";
 import Search from "./Search";
+import { Link } from "react-router-dom";
 
 const RestaurantCard = (props) => {
   const {
@@ -60,10 +61,13 @@ const Body = () => {
       ) : (
         <div className="restaurant-container">
           {filteredRestaurant.map((restaurant) => (
-            <RestaurantCard
-              details={restaurant.data}
+            <Link
+              to={restaurant.data.id}
+              className="restaurant-link"
               key={restaurant.data.id}
-            />
+            >
+              <RestaurantCard details={restaurant.data} />
+            </Link>
           ))}
         </div>
       )}

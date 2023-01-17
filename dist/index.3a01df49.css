@@ -126,4 +126,101 @@ img {
   font-family: Roboto, sans-serif;
 }
 
+.nav-list {
+  color: #fff;
+  margin: 2px;
+  font-size: 150%;
+  text-decoration: none;
+}
+
+.nav-list:hover {
+  color: orange;
+  background-color: #fff;
+  border: 1px solid orange;
+  padding: .5%;
+}
+
+.login-btn {
+  width: 8%;
+  height: 100%;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ff8000;
+  border: 1px solid #ff8000;
+  border-radius: 10%;
+  margin-top: 1.6%;
+  padding: .5%;
+}
+
+.login-btn:hover {
+  color: #ff8000;
+  background-color: #fff;
+}
+
+.restaurant-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.shimmer-mnu-card {
+  width: 1500px;
+  height: 500px;
+  background-color: #c9c7c7;
+  border: 2px solid #c9c7be;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.shimmer-details {
+  width: 500px;
+  height: 500px;
+}
+
+.menu-card {
+  background-color: #070716;
+  border: 2px solid #070716;
+  flex-wrap: wrap;
+  margin: 1%;
+  display: flex;
+}
+
+.menu-restaurant-name {
+  color: #fff;
+  margin: 1% 1% 1% 5%;
+}
+
+.menu-ref-img {
+  width: 60%;
+  height: 80%;
+  margin: 4% 2% 2% 7%;
+}
+
+.menu-offer {
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 1% 1% 1% 25%;
+  padding: 1%;
+}
+
+.menu-details {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  margin: 1%;
+}
+
+.mini-card {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.mini-grid-card {
+  margin: .4%;
+}
+
+.menu-header {
+  margin-left: 8%;
+  line-height: .3;
+}
+
 /*# sourceMappingURL=index.3a01df49.css.map */
