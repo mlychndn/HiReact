@@ -8,6 +8,8 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Info from "./components/InfoClass.js";
+import InfoComponent from "./components/Info";
 
 const AppLayout = () => {
   return (
@@ -28,6 +30,12 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
         errorElement: <Error />,
+        children: [
+          {
+            path: "info",
+            element: <Info name="Malay Chandan" kuchv="sikh le" />,
+          },
+        ],
       },
       {
         path: "/",

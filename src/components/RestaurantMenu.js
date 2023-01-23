@@ -43,7 +43,7 @@ const RestaurantMenu = () => {
               <p>{menuData.cuisines.join(", ")}</p>
               <p>{menuData.locality} </p>
               <div className="mini-card">
-                <div class="mini-grid-card">
+                <div className="mini-grid-card">
                   <h4>{menuData.avgRating}</h4>
                   <p>{menuData.totalRatingsString}</p>
                 </div>
