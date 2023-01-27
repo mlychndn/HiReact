@@ -1,4 +1,7 @@
-import restaurantData, { IMG_CDN_URL } from "../utils/config";
+import restaurantData, {
+  IMG_CDN_URL,
+  ALL_RESTAURANT_API,
+} from "../utils/config";
 import { useState, useEffect } from "react";
 import ShimmerUi from "./ShimmerUi";
 import Search from "./Search";
@@ -38,9 +41,7 @@ const Body = () => {
   }, []);
 
   const getRestaurantData = async () => {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.45242&lng=78.33159289999999&page_type=DESKTOP_WEB_LISTING"
-    );
+    const response = await fetch(ALL_RESTAURANT_API);
     const data = await response.json();
     const restaurantList = data?.data?.cards[2]?.data?.data?.cards;
     setFilteredRestaurant(restaurantList);

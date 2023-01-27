@@ -1,35 +1,50 @@
 import React from "react";
 
 class Info extends React.Component {
-  // render should always be required for class based component
   constructor(props) {
-    //constructor is a place where initilazion done
     super(props);
-    //create state
+
+    // console.log(this);
+    const { count, count2 } = this.props;
+
     this.state = {
-      count: 0,
-      count2: 2,
-    };
+      count,
+      count2,
+      url: "",
+    }; //
+  }
+
+  async componentDidMount() {
+    const data = await fetch("https://dog.ceo/api/breeds/image/random");
+    const json = await data.json();
+
+    this.setState({
+      url: json.message,
+    });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(`prevProps: ${JSON.stringify(prevProps)}`);
+    console.log(`prevState: ${JSON.stringify(prevState)}`);
   }
   render() {
-    console.log(this);
     const { count, count2 } = this.state;
+
     return (
       <div>
-        <h1>Info based class component of {this.props?.name}</h1>
-        <h2>
-          props:{this.props.kuchv} {this.state.count}
-        </h2>
-        <h4>{this.state.count2}</h4>
+        <h1>This info is comming from react class component</h1>
+        <p>{count}</p>
+        <p>{count2}</p>
+        {!this.state.url ? "" : <img src={this.state.url} alt="dog-image" />}
         <button
           onClick={() => {
             this.setState({
-              count: count + 1,
+              count: +count + 1,
               count2: count2 - 1,
             });
           }}
         >
-          setCount
+          set class count
         </button>
       </div>
     );

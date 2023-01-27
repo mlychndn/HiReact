@@ -8,24 +8,71 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
-import Info from "./components/InfoClass.js";
-import InfoComponent from "./components/Info";
+import InfoClass from "./components/InfoClass.js";
+import Info from "./components/Info";
 
 const AppLayout = () => {
   return (
     <>
       <Header />
-      {<Outlet />}
+      {/* {<Outlet />} */}
+      <Outlet />
       <Footer />
     </>
   );
 };
 
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <AppLayout />,
+//     children: [
+//       {
+//         path: "/about",
+//         element: <About />,
+//         errorElement: <Error />,
+//         children: [
+//           {
+//             path: "info",
+//             element: <Info name="Malay Chandan" kuchv="sikh le" />,
+//           },
+//         ],
+//       },
+//       {
+//         path: "/",
+//         element: <Body />,
+//         errorElement: <Error />,
+//       },
+//       {
+//         path: "/home",
+//         element: <Body />,
+//         errorElement: <Error />,
+//       },
+//       {
+//         path: "/contact",
+//         element: <Contact />,
+//         errorElement: <Error />,
+//       },
+//       {
+//         path: "/:id",
+//         element: <RestaurantMenu />,
+//         errorElement: <Error />,
+//       },
+//     ],
+//   },
+// ]);
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
+      {
+        path: "/",
+        element: <Body />,
+        errorElement: <Error />,
+      },
       {
         path: "/about",
         element: <About />,
@@ -33,19 +80,20 @@ const router = createBrowserRouter([
         children: [
           {
             path: "info",
-            element: <Info name="Malay Chandan" kuchv="sikh le" />,
+            element: (
+              <>
+                <InfoClass count="1" count2="0" child="child-1" />
+                <InfoClass count="1" count2="0" child="child-2" />
+              </>
+            ),
+            errorElement: <Error />,
           },
+          // {
+          //   path: "info",
+          //   element: <Info />,
+          //   errorElement: <Error />,
+          // },
         ],
-      },
-      {
-        path: "/",
-        element: <Body />,
-        errorElement: <Error />,
-      },
-      {
-        path: "/home",
-        element: <Body />,
-        errorElement: <Error />,
       },
       {
         path: "/contact",
@@ -55,7 +103,6 @@ const router = createBrowserRouter([
       {
         path: "/:id",
         element: <RestaurantMenu />,
-        errorElement: <Error />,
       },
     ],
   },

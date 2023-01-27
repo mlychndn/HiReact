@@ -4,34 +4,8 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [login, setLogin] = useState("true");
 
-  // const buttonHandler = () => {
-  //   setTitle("Naya Title");
-  // };
   const toggleLogin = () => {
     login === "true" ? setLogin("false") : setLogin("true");
-    // const url = "http://localhost:3000/api/v1/users/logIn";
-    // const data = {
-    //   email: "suriyaghosh383@gmail.com",
-    //   password: "Yaadhai!123",
-    // };
-    // const options = {
-    //   method: "post",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   mode: "cors",
-    //   body: JSON.stringify(data),
-    // };
-    // fetch(url, options)
-    //   .then((res) => {
-    //     res.json();
-    //   })
-    //   .then((d) => {
-    //     console.log(d);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err.message);
-    //   });
   };
 
   return (
