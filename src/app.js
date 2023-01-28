@@ -15,12 +15,12 @@ const Instamart = lazy(() => import("./components/Instamart"));
 
 const AppLayout = () => {
   return (
-    <>
+    <div className="relative">
       <Header />
       {/* {<Outlet />} */}
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -14,13 +14,13 @@ const RestaurantCard = (props) => {
   const cuisinesData = cuisines.join(" ,");
 
   return (
-    <div className="restaurant-card">
-      <img className="food-img" src={imgUrl} alt="" />
-      <h2 className="restaurant-name">{name}</h2>
-      <p className="restaurant-name">{cuisinesData}</p>
-      <div className="restaurant-rating"> ⭐{avgRating}</div>
-      <div className="restaurant-rating"> {lastMileTravelString}</div>
-      <div className="restaurant-rating"> {costForTwoString}</div>
+    <div className="w-80 h-96 m-4 p-2 hover:shadow-lg">
+      <img className="m-1" src={imgUrl} alt="" />
+      <h2 className="text-xl text-center mt-3">{name}</h2>
+      <p className="ml-3">{cuisinesData}</p>
+      <div className="ml-3"> {`${avgRating} ⭐`}</div>
+      <div className="ml-3"> {lastMileTravelString}</div>
+      <div className="ml-3"> {costForTwoString}</div>
     </div>
   );
 };

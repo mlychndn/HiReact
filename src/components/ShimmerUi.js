@@ -4,8 +4,8 @@ const ShimmerUi = function () {
   return (
     <>
       {createdArray.map((el, idx) => (
-        <div className="shimmer-card" key={idx}>
-          <div className="shimmer-card-img"></div>
+        <div className="w-80 h-96 bg-white my-3 mx-3" key={idx}>
+          <div className="w-40 h-40 bg-gray"></div>
           <div className="shimmer-card-content"></div>
           <div className="shimmer-card-details"></div>
         </div>

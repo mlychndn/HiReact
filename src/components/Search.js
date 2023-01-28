@@ -31,14 +31,17 @@ const Search = (props) => {
   return (
     <>
       <input
-        className="input-search"
+        className="my-3 mx-2 px-3 w-80 h-9 shadow-md bg-yellow-50"
         type="text"
         value={searchText}
         placeholder="Search"
         onChange={getSearchValue}
         onKeyDown={getRestaurant}
       />
-      <button className="search-btn" onClick={getFilteredRestaurant}>
+      <button
+        className="mx-5 my-5 py-1  text-xl rounded-full w-28 h-9 bg-orange-400 text-white text-center hover:bg-slate-500"
+        onClick={getFilteredRestaurant}
+      >
         Search
       </button>
     </>

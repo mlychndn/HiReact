@@ -24,14 +24,14 @@ const Body = () => {
   }
 
   return (
-    <div>
+    <div className="mt-24">
       <Search allRestaurant={allRestaurant} filterHandler={getRestaurantList} />
       {filteredRestaurant.length === 0 ? (
         <div className="shimmer-container">
           <ShimmerUi />
         </div>
       ) : (
-        <div className="restaurant-container">
+        <div className=" mx-3 flex flex-wrap">
           {filteredRestaurant.map((restaurant) => (
             <Link
               to={restaurant.data.id}

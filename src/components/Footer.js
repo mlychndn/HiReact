@@ -1,7 +1,9 @@
 const Footer = () => {
   return (
-    <div className="footer">
-      <h2 className="footer-header">Thank you for visting our site 😊😊</h2>
+    <div className=" bg-orange-500 h-14">
+      <h2 className="text-2xl text-white text-center my-3">
+        Maintained and developed by Malay Chandan
+      </h2>
     </div>
   );
 };
