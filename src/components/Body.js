@@ -1,56 +1,27 @@
-import restaurantData, {
-  IMG_CDN_URL,
-  ALL_RESTAURANT_API,
-} from "../utils/config";
-import { useState, useEffect } from "react";
 import ShimmerUi from "./ShimmerUi";
 import Search from "./Search";
 import { Link } from "react-router-dom";
-
-const RestaurantCard = (props) => {
-  const {
-    cloudinaryImageId,
-    name,
-    cuisines,
-    avgRating,
-    lastMileTravelString,
-    costForTwoString,
-  } = props.details;
-  const imgUrl = `${IMG_CDN_URL}${cloudinaryImageId}
-  `;
-  const cuisinesData = cuisines.join(" ,");
-
-  return (
-    <div className="restaurant-card">
-      <img className="food-img" src={imgUrl} alt="" />
-      <h2 className="restaurant-name">{name}</h2>
-      <p className="restaurant-name">{cuisinesData}</p>
-      <div className="restaurant-rating"> ⭐{avgRating}</div>
-      <div className="restaurant-rating"> {lastMileTravelString}</div>
-      <div className="restaurant-rating"> {costForTwoString}</div>
-    </div>
-  );
-};
+import RestaurantCard from "./RestaurantCard";
+import { useRestaurantData } from "../utils/useRestaurant";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
-  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-  const [allRestaurant, setAllRestaurant] = useState([]);
-
-  useEffect(() => {
-    getRestaurantData();
-  }, []);
-
-  const getRestaurantData = async () => {
-    const response = await fetch(ALL_RESTAURANT_API);
-    const data = await response.json();
-    const restaurantList = data?.data?.cards[2]?.data?.data?.cards;
-    setFilteredRestaurant(restaurantList);
-    setAllRestaurant(restaurantList);
-  };
+  const [filteredRestaurant, allRestaurant, setFilteredRestaurant] =
+    useRestaurantData();
 
   const getRestaurantList = (data) => {
     setFilteredRestaurant(data);
   };
+
+  const isOnline = useOnline();
+
+  if (!isOnline) {
+    return (
+      <div>
+        <h1>You seems offline ⛔</h1>
+      </div>
+    );
+  }
 
   return (
     <div>

@@ -35,6 +35,11 @@ const Header = () => {
               Contact
             </Link>
           </li>
+          <li>
+            <Link to="/instamart" className="nav-list">
+              Instamart
+            </Link>
+          </li>
         </ul>
       </div>
       <button className="login-btn" onClick={toggleLogin}>

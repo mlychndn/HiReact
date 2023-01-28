@@ -1,26 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL, RESTAURANT_API } from "../utils/config";
 import ShimmerMenu from "./ShimmerMenu";
+import { useRestaurant } from "../utils/useRestaurant";
+
 const RestaurantMenu = () => {
   const { id } = useParams();
-  const [menuData, setMenuData] = useState("");
 
-  const getRestaurantMenu = async () => {
-    const response = await fetch(RESTAURANT_API.replace("{ID}", id));
-    const data = await response.json();
-    console.log(data);
-    setMenuData(data.data);
-  };
-
-  useState(() => {
-    getRestaurantMenu();
-  }, []);
+  const menuData = useRestaurant(id);
 
   const items = { ...menuData?.menu?.items };
 
   const itemsArray = Object.values(items);
-  console.log(itemsArray);
 
   return (
     <>

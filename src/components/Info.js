@@ -14,7 +14,15 @@ const Info = (props) => {
 
   useEffect(() => {
     getDogData();
-  }, [count]);
+
+    const timer = setInterval(() => {
+      console.log("This interval will run after every 2 secs");
+    }, 2000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [count, count2]);
 
   return (
     <>
