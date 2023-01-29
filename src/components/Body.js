@@ -31,7 +31,7 @@ const Body = () => {
           <ShimmerUi />
         </div>
       ) : (
-        <div className=" mx-3 flex flex-wrap">
+        <div className=" mx-12 flex flex-wrap">
           {filteredRestaurant.map((restaurant) => (
             <Link
               to={restaurant.data.id}

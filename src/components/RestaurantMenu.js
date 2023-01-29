@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  useParams,
+  Link,
+} from "react-router-dom";
 import { IMG_CDN_URL, RESTAURANT_API } from "../utils/config";
 import ShimmerMenu from "./ShimmerMenu";
 import { useRestaurant } from "../utils/useRestaurant";
+import WidgetCard from "./WidgetCard";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -12,6 +19,9 @@ const RestaurantMenu = () => {
   const items = { ...menuData?.menu?.items };
 
   const itemsArray = Object.values(items);
+  const widgets = menuData?.menu?.widgets;
+
+  console.log(itemsArray);
 
   return (
     <>
@@ -19,52 +29,61 @@ const RestaurantMenu = () => {
         <ShimmerMenu />
       ) : (
         <>
-          <div className="menu-card">
-            <div className="menu-image">
+          <div className="bg-[#171a29] flex text-white mt-28 h-52  justify-around ">
+            <div className="">
               <img
-                className="menu-ref-img"
+                className="h-44 my-3"
                 src={`${IMG_CDN_URL}/${menuData.cloudinaryImageId}`}
                 alt=""
               />
             </div>
-            <div className="menu-restaurant-name">
-              <h3>{menuData.name}</h3>
-              <p>{menuData.cuisines.join(", ")}</p>
-              <p>{menuData.locality} </p>
-              <div className="mini-card">
-                <div className="mini-grid-card">
-                  <h4>{menuData.avgRating}</h4>
-                  <p>{menuData.totalRatingsString}</p>
+            <div className=" my-3 ">
+              <h3 className="text-2xl font-bold">{menuData.name}</h3>
+              <p className="text-lg font-normal text-slate-300 mt-4">
+                {menuData.cuisines.join(", ")}
+              </p>
+              <p className="text-base font-normal text-slate-300">
+                {menuData.locality}, {menuData.areaSlug}
+              </p>
+              <div className="flex justify-between text-slate-300 ">
+                <div>
+                  <h3 className="font-bold">{menuData.avgRating}</h3>
+                  <p className="font-thin text-sm">
+                    {menuData.totalRatingsString}
+                  </p>
                 </div>
-                {/* <div class="mini-grid-card">
-                  <h4>{menuData.avgRating}</h4>
-                  <p>{menuData.totalRatingsString}</p>
-                </div> */}
-                <div className="mini-grid-card">
-                  <h4>{menuData.costForTwoMsg.split(" ")[0]}</h4>
-                  <p>
+                <div>
+                  <h4 className="font-bold">
+                    {menuData?.sla.slaString.toLowerCase()}
+                  </h4>
+                  <p className="font-thin text-sm">{`delivery time`}</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">
+                    {menuData.costForTwoMsg.split(" ")[0]}
+                  </h4>
+                  <p className="font-thin text-sm">
                     {menuData.costForTwoMsg.split(" ")[1]}{" "}
                     {menuData.costForTwoMsg.split(" ")[2]}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="menu-offer">
+            <div className="my-6 p-4 px-6 border-4 border-white">
               {menuData.offerMeta.map((offer) => (
                 <h3 key={Math.random()}>{offer.header}</h3>
               ))}
             </div>
           </div>
-          <div className="menu-details">
-            <h3 className="menu-header">Recommended</h3>
-            <p className="menu-header">
-              {`${Object.values(menuData.menu.items).length} items`}{" "}
-            </p>
-            <ul>
-              {itemsArray.map((item) => (
-                <li key={item.id}>{item.name}</li>
+          <div className="flex justify-around  ">
+            <div className="p-3 my-3 border-solid  border-slate-600">
+              {widgets.map((widget) => (
+                <Link to="/widget" className=" hover:text-orange-400">
+                  <div>{widget.name}</div>
+                </Link>
               ))}
-            </ul>
+            </div>
+            <WidgetCard itemsArray={itemsArray} />
           </div>
         </>
       )}
