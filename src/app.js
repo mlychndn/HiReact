@@ -9,6 +9,7 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import InfoClass from "./components/InfoClass.js";
+
 import Info from "./components/Info";
 
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -105,6 +106,7 @@ const router = createBrowserRouter([
       {
         path: "/:id",
         element: <RestaurantMenu />,
+        errorElement: <Error />,
       },
       {
         path: "/instamart",

@@ -1,9 +1,16 @@
 import { IMG_CDN_URL } from "../utils/config";
 
 const WidgetCard = (props) => {
-  const { itemsArray } = props;
-  const recommendedArray = itemsArray.filter((item) => item.recommended === 1);
-  console.log(recommendedArray);
+  console.log("props", props);
+  const { itemsArray, filter } = props;
+  const recommendedArray = itemsArray.filter((item) => {
+    if (filter === "Recommended") {
+      return item[filter.toLowerCase()] === 1;
+    } else {
+      return item.category === filter;
+    }
+  });
+  console.log("rec", recommendedArray);
   return (
     <div>
       {recommendedArray.map((item) => (
@@ -17,11 +24,15 @@ const WidgetCard = (props) => {
           </div>
 
           <div>
-            <img
-              className="h-28 w-28"
-              src={`${IMG_CDN_URL}${item.cloudinaryImageId}`}
-              alt=""
-            />
+            {!item.cloudinaryImageId ? (
+              ""
+            ) : (
+              <img
+                className="h-28 w-28"
+                src={`${IMG_CDN_URL}${item.cloudinaryImageId}`}
+                alt=""
+              />
+            )}
           </div>
         </div>
       ))}

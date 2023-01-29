@@ -12,6 +12,7 @@ import { useRestaurant } from "../utils/useRestaurant";
 import WidgetCard from "./WidgetCard";
 
 const RestaurantMenu = () => {
+  const [filter, setFilter] = useState("Recommended");
   const { id } = useParams();
 
   const menuData = useRestaurant(id);
@@ -21,7 +22,7 @@ const RestaurantMenu = () => {
   const itemsArray = Object.values(items);
   const widgets = menuData?.menu?.widgets;
 
-  console.log(itemsArray);
+  // console.log(itemsArray);
 
   return (
     <>
@@ -78,12 +79,18 @@ const RestaurantMenu = () => {
           <div className="flex justify-around  ">
             <div className="p-3 my-3 border-solid  border-slate-600">
               {widgets.map((widget) => (
-                <Link to="/widget" className=" hover:text-orange-400">
+                <Link
+                  className=" hover:text-orange-400"
+                  onClick={() => {
+                    console.log("clicked", widget);
+                    setFilter(widget.name);
+                  }}
+                >
                   <div>{widget.name}</div>
                 </Link>
               ))}
             </div>
-            <WidgetCard itemsArray={itemsArray} />
+            <WidgetCard itemsArray={itemsArray} filter={filter} />
           </div>
         </>
       )}
