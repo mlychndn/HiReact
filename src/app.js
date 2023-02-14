@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
@@ -9,19 +9,40 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import InfoClass from "./components/InfoClass.js";
+import UserContext from "./utils/UserContext";
+import { useContext } from "react";
 
 import Info from "./components/Info";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 
 const AppLayout = () => {
+  // const { user, setUser } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
+  const [user, setUser] = useState({
+    name: "Malay Chandan",
+    mail: "mlychndn@gmail.com",
+  });
+
+  console.log(UserContext);
+
   return (
-    <div className="relative">
-      <Header />
-      {/* {<Outlet />} */}
-      <Outlet />
-      <Footer />
-    </div>
+    <>
+      <UserContext.Provider value={{ user: user, setUser }}>
+        <div className="relative flex flex-col min-h-screen">
+          <Header />
+          <div className="mt-24">
+            <h1>
+              {user.name}-{user.mail}
+            </h1>
+          </div>
+
+          {/* {<Outlet />} */}
+          <Outlet />
+          <Footer />
+        </div>
+      </UserContext.Provider>
+    </>
   );
 };
 

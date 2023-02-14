@@ -562,31 +562,180 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Instamart = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "This is instamart component"
-        }, void 0, false, {
+var _react = require("react");
+var _upPng = require("./up.png");
+var _upPngDefault = parcelHelpers.interopDefault(_upPng);
+var _downPng = require("./down.png");
+var _downPngDefault = parcelHelpers.interopDefault(_downPng);
+var _s = $RefreshSig$();
+const Section = ({ title , description , isVisible , setIsVisible , setNotVisible  })=>{
+    // const [isVisible, setIsVisible] = useState(false);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "relative m-4 p-3 w-full border-4 border-slate-700",
+            children: [
+                !isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "absolute top-0 right-0",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>{
+                            setIsVisible();
+                        },
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _upPngDefault.default),
+                            alt: "",
+                            className: "w-5 h-5"
+                        }, void 0, false, {
+                            fileName: "src/components/Instamart.js",
+                            lineNumber: 23,
+                            columnNumber: 15
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Instamart.js",
+                        lineNumber: 18,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Instamart.js",
+                    lineNumber: 17,
+                    columnNumber: 11
+                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "absolute right-0 top-0",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>setNotVisible(),
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _downPngDefault.default),
+                            alt: "",
+                            className: "w-5 h-5"
+                        }, void 0, false, {
+                            fileName: "src/components/Instamart.js",
+                            lineNumber: 29,
+                            columnNumber: 15
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Instamart.js",
+                        lineNumber: 28,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Instamart.js",
+                    lineNumber: 27,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "text-xl text-red-600 font-bold",
+                    children: title
+                }, void 0, false, {
+                    fileName: "src/components/Instamart.js",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, undefined),
+                isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: description
+                }, void 0, false, {
+                    fileName: "src/components/Instamart.js",
+                    lineNumber: 34,
+                    columnNumber: 22
+                }, undefined) : ""
+            ]
+        }, void 0, true, {
             fileName: "src/components/Instamart.js",
-            lineNumber: 4,
+            lineNumber: 15,
             columnNumber: 7
         }, undefined)
-    }, void 0, false, {
+    }, void 0, false);
+};
+_c = Section;
+const Instamart = ()=>{
+    _s();
+    const [makeVisible, setMakeVisible] = (0, _react.useState)("tithi");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "m-24",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                title: "Tithi",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Senectus et netus et malesuada fames. Integer eget aliquet nibh praesent tristique. Fusce id velit ut tortor pretium viverra suspendisse potenti. Amet porttitor eget dolor morbi. Purus sit amet luctus venenatis. Quis enim lobortis scelerisque fermentum dui faucibus in ornare",
+                isVisible: makeVisible === "tithi",
+                setIsVisible: ()=>{
+                    setMakeVisible("tithi");
+                },
+                setNotVisible: ()=>{
+                    setMakeVisible("");
+                }
+            }, "tithi", false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 44,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                title: "Malay",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Senectus et netus et malesuada fames. Integer eget aliquet nibh praesent tristique. Fusce id velit ut tortor pretium viverra suspendisse potenti. Amet porttitor eget dolor morbi. Purus sit amet luctus venenatis. Quis enim lobortis scelerisque fermentum dui faucibus in ornare",
+                isVisible: makeVisible === "malay",
+                setIsVisible: ()=>{
+                    setMakeVisible("malay");
+                },
+                setNotVisible: ()=>{
+                    setMakeVisible("");
+                }
+            }, "malay", false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 58,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                title: "Rewati",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Senectus et netus et malesuada fames. Integer eget aliquet nibh praesent tristique. Fusce id velit ut tortor pretium viverra suspendisse potenti. Amet porttitor eget dolor morbi. Purus sit amet luctus venenatis. Quis enim lobortis scelerisque fermentum dui faucibus in ornare",
+                isVisible: makeVisible === "rewati",
+                setIsVisible: ()=>{
+                    setMakeVisible("rewati");
+                },
+                setNotVisible: ()=>{
+                    setMakeVisible("");
+                }
+            }, "rewati", false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 72,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                title: "Abhinav",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Senectus et netus et malesuada fames. Integer eget aliquet nibh praesent tristique. Fusce id velit ut tortor pretium viverra suspendisse potenti. Amet porttitor eget dolor morbi. Purus sit amet luctus venenatis. Quis enim lobortis scelerisque fermentum dui faucibus in ornare",
+                isVisible: makeVisible === "abhinav",
+                setIsVisible: ()=>{
+                    setMakeVisible("abhinav");
+                },
+                setNotVisible: ()=>{
+                    setMakeVisible("");
+                }
+            }, "abhinav", false, {
+                fileName: "src/components/Instamart.js",
+                lineNumber: 86,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/Instamart.js",
-        lineNumber: 3,
+        lineNumber: 43,
         columnNumber: 5
     }, undefined);
 };
-_c = Instamart;
+_s(Instamart, "5Q5V3+6WBM7dVwoF5oQV3EOqIuY=");
+_c1 = Instamart;
 exports.default = Instamart;
-var _c;
-$RefreshReg$(_c, "Instamart");
+var _c, _c1;
+$RefreshReg$(_c, "Section");
+$RefreshReg$(_c1, "Instamart");
 
   $parcel$ReactRefreshHelpers$8238.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","05c99"], null, "parcelRequire21de")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./up.png":"kMfOl","./down.png":"7RucK","react":"21dqq"}],"kMfOl":[function(require,module,exports) {
+module.exports = require("ff503fc8194ab632").getBundleURL("jkrEb") + "up.f4122aaa.png" + "?" + Date.now();
+
+},{"ff503fc8194ab632":"lgJ39"}],"7RucK":[function(require,module,exports) {
+module.exports = require("e57593b4d8009ea8").getBundleURL("jkrEb") + "down.6e5a7195.png" + "?" + Date.now();
+
+},{"e57593b4d8009ea8":"lgJ39"}]},["1xC6H","05c99"], null, "parcelRequire21de")
 
 //# sourceMappingURL=Instamart.0762395e.js.map

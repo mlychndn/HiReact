@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import UserContext from "../utils/UserContext";
+import UserContext from "../utils/UserContext";
 
 const Search = (props) => {
   const [searchText, setSearchText] = useState("");
   const { allRestaurant, filterHandler } = props;
+  const { user, setUser } = useContext(UserContext);
 
   const getRestaurant = (e) => {
     if (e.key === "Enter") {
@@ -44,6 +47,13 @@ const Search = (props) => {
       >
         Search
       </button>
+      <input
+        className="my-3 mx-2 px-3 w-80 h-9 shadow-md bg-yellow-50"
+        type="text"
+        value={`${user.name}`}
+        onChange={(e) => setUser({ ...user, name: e.target.value })}
+        placeholder="Search"
+      />
     </>
   );
 };

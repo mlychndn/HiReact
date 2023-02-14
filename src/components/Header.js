@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [login, setLogin] = useState("true");
+  const { user } = useContext(UserContext);
+  const { name, mail } = user;
 
   const toggleLogin = () => {
     login === "true" ? setLogin("false") : setLogin("true");
@@ -33,6 +36,9 @@ const Header = () => {
         </Link>
       </ul>
 
+      <h3>
+        {name}-{mail}
+      </h3>
       <button
         className="mr-3 my-5  text-black text-sm rounded-full w-24 h-8 bg-white text-center font-medium hover:bg-slate-500"
         onClick={toggleLogin}

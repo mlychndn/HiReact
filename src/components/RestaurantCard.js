@@ -1,4 +1,6 @@
 import restaurantData, { IMG_CDN_URL } from "../utils/config";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const {
@@ -13,6 +15,8 @@ const RestaurantCard = (props) => {
   `;
   const cuisinesData = cuisines.join(" ,");
 
+  const { user } = useContext(UserContext);
+
   return (
     <div className="w-80 max-h-96 m-4 p-2 hover:shadow-lg">
       <img className="m-1" src={imgUrl} alt="" />
@@ -21,6 +25,9 @@ const RestaurantCard = (props) => {
       <div className="ml-3"> {`${avgRating} ⭐`}</div>
       <div className="ml-3"> {lastMileTravelString}</div>
       <div className="ml-3"> {costForTwoString}</div>
+      <p>
+        {user.name}-{user.mail}
+      </p>
     </div>
   );
 };
